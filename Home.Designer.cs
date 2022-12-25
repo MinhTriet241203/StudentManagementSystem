@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ThongKe = new System.Windows.Forms.Button();
+            this.DiemSo = new System.Windows.Forms.Button();
+            this.MonHoc = new System.Windows.Forms.Button();
+            this.LopHoc = new System.Windows.Forms.Button();
+            this.HocSinh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,85 +62,105 @@
             this.label2.Text = "\r\n";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button2
+            // ThongKe
             // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Image = global::StudentManagementSystem.Properties.Resources.classroom_2_128;
-            this.button2.Location = new System.Drawing.Point(350, 209);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.button2.Size = new System.Drawing.Size(256, 337);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Lớp học";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.ThongKe.BackColor = System.Drawing.Color.Teal;
+            this.ThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ThongKe.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ThongKe.FlatAppearance.BorderSize = 0;
+            this.ThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.ThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ThongKe.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThongKe.ForeColor = System.Drawing.Color.Transparent;
+            this.ThongKe.Image = global::StudentManagementSystem.Properties.Resources.pie_chart_128;
+            this.ThongKe.Location = new System.Drawing.Point(1031, 209);
+            this.ThongKe.Name = "ThongKe";
+            this.ThongKe.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.ThongKe.Size = new System.Drawing.Size(219, 337);
+            this.ThongKe.TabIndex = 2;
+            this.ThongKe.Text = "Thống kê";
+            this.ThongKe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ThongKe.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // DiemSo
             // 
-            this.button3.BackColor = System.Drawing.Color.Teal;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::StudentManagementSystem.Properties.Resources.book_stack_128;
-            this.button3.Location = new System.Drawing.Point(653, 209);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.button3.Size = new System.Drawing.Size(256, 337);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Môn học";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.DiemSo.BackColor = System.Drawing.Color.Teal;
+            this.DiemSo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.DiemSo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.DiemSo.FlatAppearance.BorderSize = 0;
+            this.DiemSo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.DiemSo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DiemSo.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiemSo.ForeColor = System.Drawing.Color.Transparent;
+            this.DiemSo.Image = global::StudentManagementSystem.Properties.Resources.feather_128;
+            this.DiemSo.Location = new System.Drawing.Point(773, 209);
+            this.DiemSo.Name = "DiemSo";
+            this.DiemSo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.DiemSo.Size = new System.Drawing.Size(219, 337);
+            this.DiemSo.TabIndex = 2;
+            this.DiemSo.Text = "Điểm số";
+            this.DiemSo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.DiemSo.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // MonHoc
             // 
-            this.button4.BackColor = System.Drawing.Color.Teal;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Image = global::StudentManagementSystem.Properties.Resources.feather_128;
-            this.button4.Location = new System.Drawing.Point(971, 209);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.button4.Size = new System.Drawing.Size(256, 337);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Điểm số";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
+            this.MonHoc.BackColor = System.Drawing.Color.Teal;
+            this.MonHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.MonHoc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.MonHoc.FlatAppearance.BorderSize = 0;
+            this.MonHoc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.MonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MonHoc.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonHoc.ForeColor = System.Drawing.Color.Transparent;
+            this.MonHoc.Image = global::StudentManagementSystem.Properties.Resources.book_stack_128;
+            this.MonHoc.Location = new System.Drawing.Point(521, 209);
+            this.MonHoc.Name = "MonHoc";
+            this.MonHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.MonHoc.Size = new System.Drawing.Size(219, 337);
+            this.MonHoc.TabIndex = 2;
+            this.MonHoc.Text = "Môn học";
+            this.MonHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.MonHoc.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // LopHoc
             // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::StudentManagementSystem.Properties.Resources.student_128;
-            this.button1.Location = new System.Drawing.Point(37, 209);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.button1.Size = new System.Drawing.Size(256, 337);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Học sinh";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.LopHoc.BackColor = System.Drawing.Color.Teal;
+            this.LopHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LopHoc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LopHoc.FlatAppearance.BorderSize = 0;
+            this.LopHoc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.LopHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LopHoc.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LopHoc.ForeColor = System.Drawing.Color.Transparent;
+            this.LopHoc.Image = global::StudentManagementSystem.Properties.Resources.classroom_2_128;
+            this.LopHoc.Location = new System.Drawing.Point(269, 209);
+            this.LopHoc.Name = "LopHoc";
+            this.LopHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.LopHoc.Size = new System.Drawing.Size(219, 337);
+            this.LopHoc.TabIndex = 2;
+            this.LopHoc.Text = "Lớp học";
+            this.LopHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.LopHoc.UseVisualStyleBackColor = false;
+            // 
+            // HocSinh
+            // 
+            this.HocSinh.BackColor = System.Drawing.Color.Teal;
+            this.HocSinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.HocSinh.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.HocSinh.FlatAppearance.BorderSize = 0;
+            this.HocSinh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.HocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HocSinh.Font = new System.Drawing.Font("JetBrains Mono NL", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HocSinh.ForeColor = System.Drawing.Color.Transparent;
+            this.HocSinh.Image = global::StudentManagementSystem.Properties.Resources.student_128;
+            this.HocSinh.Location = new System.Drawing.Point(12, 209);
+            this.HocSinh.Name = "HocSinh";
+            this.HocSinh.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.HocSinh.Size = new System.Drawing.Size(219, 337);
+            this.HocSinh.TabIndex = 2;
+            this.HocSinh.Text = "Học sinh";
+            this.HocSinh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HocSinh.UseVisualStyleBackColor = false;
             // 
             // Home
             // 
@@ -147,10 +168,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ThongKe);
+            this.Controls.Add(this.DiemSo);
+            this.Controls.Add(this.MonHoc);
+            this.Controls.Add(this.LopHoc);
+            this.Controls.Add(this.HocSinh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -166,10 +188,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button HocSinh;
+        private System.Windows.Forms.Button LopHoc;
+        private System.Windows.Forms.Button DiemSo;
+        private System.Windows.Forms.Button MonHoc;
+        private System.Windows.Forms.Button ThongKe;
     }
 }
 
