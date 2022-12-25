@@ -1,0 +1,11 @@
+C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe.config
+C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe
+C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManagementSystem.pdb
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.AssemblyReference.cache
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.Home.resources
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.Properties.Resources.resources
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.GenerateResource.cache
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.exe
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.pdb
