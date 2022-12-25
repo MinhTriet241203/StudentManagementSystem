@@ -33,3 +33,4 @@ D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentMa
 D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
 D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.exe
 D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.pdb
+C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.ClassesForm.resources
