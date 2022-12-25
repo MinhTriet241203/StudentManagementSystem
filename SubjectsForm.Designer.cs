@@ -71,6 +71,7 @@
             this.Name = "SubjectsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin môn học";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubjectsForm_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -71,6 +71,7 @@
             this.Name = "ScoresForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý điểm số";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScoresForm_FormClosing);
             this.ResumeLayout(false);
 
         }

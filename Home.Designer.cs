@@ -82,6 +82,7 @@
             this.ThongKe.Text = "Thống kê";
             this.ThongKe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ThongKe.UseVisualStyleBackColor = false;
+            this.ThongKe.Click += new System.EventHandler(this.ThongKe_Click);
             // 
             // DiemSo
             // 
@@ -103,6 +104,7 @@
             this.DiemSo.Text = "Điểm số";
             this.DiemSo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.DiemSo.UseVisualStyleBackColor = false;
+            this.DiemSo.Click += new System.EventHandler(this.DiemSo_Click);
             // 
             // MonHoc
             // 
@@ -124,6 +126,7 @@
             this.MonHoc.Text = "Môn học";
             this.MonHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.MonHoc.UseVisualStyleBackColor = false;
+            this.MonHoc.Click += new System.EventHandler(this.MonHoc_Click);
             // 
             // LopHoc
             // 
@@ -145,6 +148,7 @@
             this.LopHoc.Text = "Lớp học";
             this.LopHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.LopHoc.UseVisualStyleBackColor = false;
+            this.LopHoc.Click += new System.EventHandler(this.LopHoc_Click);
             // 
             // HocSinh
             // 
@@ -166,6 +170,7 @@
             this.HocSinh.Text = "Học sinh";
             this.HocSinh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.HocSinh.UseVisualStyleBackColor = false;
+            this.HocSinh.Click += new System.EventHandler(this.HocSinh_Click);
             // 
             // Home
             // 
@@ -186,6 +191,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống quản lý học sinh";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.ResumeLayout(false);
 
         }

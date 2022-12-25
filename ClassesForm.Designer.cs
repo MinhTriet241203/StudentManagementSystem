@@ -71,6 +71,7 @@
             this.Name = "ClassesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin lớp học";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClassesForm_FormClosing);
             this.ResumeLayout(false);
 
         }

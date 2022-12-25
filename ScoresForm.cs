@@ -16,5 +16,10 @@ namespace StudentManagementSystem
         {
             InitializeComponent();
         }
+
+        private void ScoresForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
