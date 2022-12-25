@@ -185,7 +185,7 @@
             this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lí học sinh";
+            this.Text = "Hệ thống quản lý học sinh";
             this.ResumeLayout(false);
 
         }
