@@ -49,7 +49,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Trang chủ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -59,7 +58,6 @@
             this.label2.Size = new System.Drawing.Size(1238, 2);
             this.label2.TabIndex = 1;
             this.label2.Text = "\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
