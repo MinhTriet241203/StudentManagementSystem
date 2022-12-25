@@ -21,3 +21,15 @@ C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.ClassesForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe.config
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManagementSystem.pdb
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.AssemblyReference.cache
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.ClassesForm.resources
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.Home.resources
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.Properties.Resources.resources
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.GenerateResource.cache
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.exe
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.pdb

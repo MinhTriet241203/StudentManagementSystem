@@ -104,5 +104,8 @@
   <ItemGroup>
     <None Include="Resources\feather-128.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart-128.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
