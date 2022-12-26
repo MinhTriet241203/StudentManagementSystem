@@ -72,7 +72,6 @@ namespace StudentManagementSystem
             if (result != DialogResult.Yes) return; //huỷ nếu không chọn yes
             bindingNavigatorDeleteItem.PerformClick();
             MessageBox.Show(successMessage, "Thông báo");
-
         }
 
         private void PreviousButton_Click(object sender, System.EventArgs e)
