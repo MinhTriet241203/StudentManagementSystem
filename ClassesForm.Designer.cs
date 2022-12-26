@@ -33,8 +33,8 @@
             System.Windows.Forms.Label numberOfStudentsLabel;
             System.Windows.Forms.Label academicYearLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassesForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.HomeButton = new System.Windows.Forms.Button();
@@ -60,13 +60,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.classesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.classesDataGridView = new System.Windows.Forms.DataGridView();
             this.classIDTextBox = new System.Windows.Forms.TextBox();
             this.numberOfStudentsTextBox = new System.Windows.Forms.TextBox();
             this.academicYearTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKStudentsClassesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentsTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.StudentsTableAdapter();
+            this.classesDataGridView = new System.Windows.Forms.DataGridView();
+            this.classIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberOfStudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.academicYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             classIDLabel = new System.Windows.Forms.Label();
             numberOfStudentsLabel = new System.Windows.Forms.Label();
             academicYearLabel = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingNavigator)).BeginInit();
             this.classesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fKStudentsClassesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +122,7 @@
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Location = new System.Drawing.Point(15, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1237, 103);
             this.label1.TabIndex = 0;
@@ -401,6 +404,46 @@
             this.classesBindingNavigatorSaveItem.Text = "Save Data";
             this.classesBindingNavigatorSaveItem.Click += new System.EventHandler(this.classesBindingNavigatorSaveItem_Click);
             // 
+            // classIDTextBox
+            // 
+            this.classIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "ClassID", true));
+            this.classIDTextBox.Enabled = false;
+            this.classIDTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classIDTextBox.Location = new System.Drawing.Point(200, 146);
+            this.classIDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.classIDTextBox.Name = "classIDTextBox";
+            this.classIDTextBox.Size = new System.Drawing.Size(112, 34);
+            this.classIDTextBox.TabIndex = 29;
+            // 
+            // numberOfStudentsTextBox
+            // 
+            this.numberOfStudentsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "NumberOfStudents", true));
+            this.numberOfStudentsTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfStudentsTextBox.Location = new System.Drawing.Point(200, 230);
+            this.numberOfStudentsTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.numberOfStudentsTextBox.Name = "numberOfStudentsTextBox";
+            this.numberOfStudentsTextBox.Size = new System.Drawing.Size(259, 34);
+            this.numberOfStudentsTextBox.TabIndex = 31;
+            // 
+            // academicYearTextBox
+            // 
+            this.academicYearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "AcademicYear", true));
+            this.academicYearTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.academicYearTextBox.Location = new System.Drawing.Point(200, 291);
+            this.academicYearTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.academicYearTextBox.Name = "academicYearTextBox";
+            this.academicYearTextBox.Size = new System.Drawing.Size(259, 34);
+            this.academicYearTextBox.TabIndex = 33;
+            // 
+            // fKStudentsClassesBindingSource
+            // 
+            this.fKStudentsClassesBindingSource.DataMember = "FK_Students_Classes";
+            this.fKStudentsClassesBindingSource.DataSource = this.classesBindingSource;
+            // 
+            // studentsTableAdapter
+            // 
+            this.studentsTableAdapter.ClearBeforeFill = true;
+            // 
             // classesDataGridView
             // 
             this.classesDataGridView.AllowUserToAddRows = false;
@@ -408,28 +451,28 @@
             this.classesDataGridView.AutoGenerateColumns = false;
             this.classesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.classesDataGridView.BackgroundColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.classesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
+            this.classIDDataGridViewTextBoxColumn,
+            this.numberOfStudentsDataGridViewTextBoxColumn,
+            this.academicYearDataGridViewTextBoxColumn});
             this.classesDataGridView.DataSource = this.classesBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.classesDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.classesDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.classesDataGridView.Location = new System.Drawing.Point(499, 135);
             this.classesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.classesDataGridView.MultiSelect = false;
@@ -441,61 +484,32 @@
             this.classesDataGridView.Size = new System.Drawing.Size(750, 491);
             this.classesDataGridView.TabIndex = 28;
             // 
-            // classIDTextBox
+            // classIDDataGridViewTextBoxColumn
             // 
-            this.classIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "ClassID", true));
-            this.classIDTextBox.Enabled = false;
-            this.classIDTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classIDTextBox.Location = new System.Drawing.Point(200, 146);
-            this.classIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.classIDTextBox.Name = "classIDTextBox";
-            this.classIDTextBox.Size = new System.Drawing.Size(128, 34);
-            this.classIDTextBox.TabIndex = 29;
+            this.classIDDataGridViewTextBoxColumn.DataPropertyName = "ClassID";
+            this.classIDDataGridViewTextBoxColumn.FillWeight = 10F;
+            this.classIDDataGridViewTextBoxColumn.HeaderText = "ID Lớp";
+            this.classIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.classIDDataGridViewTextBoxColumn.Name = "classIDDataGridViewTextBoxColumn";
+            this.classIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // numberOfStudentsTextBox
+            // numberOfStudentsDataGridViewTextBoxColumn
             // 
-            this.numberOfStudentsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "NumberOfStudents", true));
-            this.numberOfStudentsTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberOfStudentsTextBox.Location = new System.Drawing.Point(200, 230);
-            this.numberOfStudentsTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.numberOfStudentsTextBox.Name = "numberOfStudentsTextBox";
-            this.numberOfStudentsTextBox.Size = new System.Drawing.Size(259, 34);
-            this.numberOfStudentsTextBox.TabIndex = 31;
+            this.numberOfStudentsDataGridViewTextBoxColumn.DataPropertyName = "NumberOfStudents";
+            this.numberOfStudentsDataGridViewTextBoxColumn.FillWeight = 23.55915F;
+            this.numberOfStudentsDataGridViewTextBoxColumn.HeaderText = "Số học sinh";
+            this.numberOfStudentsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numberOfStudentsDataGridViewTextBoxColumn.Name = "numberOfStudentsDataGridViewTextBoxColumn";
+            this.numberOfStudentsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // academicYearTextBox
+            // academicYearDataGridViewTextBoxColumn
             // 
-            this.academicYearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "AcademicYear", true));
-            this.academicYearTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.academicYearTextBox.Location = new System.Drawing.Point(200, 291);
-            this.academicYearTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.academicYearTextBox.Name = "academicYearTextBox";
-            this.academicYearTextBox.Size = new System.Drawing.Size(259, 34);
-            this.academicYearTextBox.TabIndex = 33;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClassID";
-            this.dataGridViewTextBoxColumn1.FillWeight = 45F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã lớp";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NumberOfStudents";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Số học sinh";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "AcademicYear";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Năm học";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.academicYearDataGridViewTextBoxColumn.DataPropertyName = "AcademicYear";
+            this.academicYearDataGridViewTextBoxColumn.FillWeight = 23.55915F;
+            this.academicYearDataGridViewTextBoxColumn.HeaderText = "Năm học";
+            this.academicYearDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.academicYearDataGridViewTextBoxColumn.Name = "academicYearDataGridViewTextBoxColumn";
+            this.academicYearDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ClassesForm
             // 
@@ -503,7 +517,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1260, 637);
+            this.ClientSize = new System.Drawing.Size(1269, 646);
             this.Controls.Add(classIDLabel);
             this.Controls.Add(this.classIDTextBox);
             this.Controls.Add(numberOfStudentsLabel);
@@ -521,7 +535,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ClassesForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -534,6 +548,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingNavigator)).EndInit();
             this.classesBindingNavigator.ResumeLayout(false);
             this.classesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fKStudentsClassesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -567,13 +582,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton classesBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView classesDataGridView;
         private System.Windows.Forms.TextBox classIDTextBox;
         private System.Windows.Forms.TextBox numberOfStudentsTextBox;
         private System.Windows.Forms.TextBox academicYearTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.BindingSource fKStudentsClassesBindingSource;
+        private StudentManageDataSetTableAdapters.StudentsTableAdapter studentsTableAdapter;
+        private System.Windows.Forms.DataGridView classesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn classIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfStudentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn academicYearDataGridViewTextBoxColumn;
     }
 }
 

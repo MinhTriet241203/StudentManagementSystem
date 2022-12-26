@@ -67,14 +67,14 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.PreviousButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.studentsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentGenderTextBox = new System.Windows.Forms.TextBox();
             this.HomeButton = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentsDataGridView = new System.Windows.Forms.DataGridView();
             studentIDLabel = new System.Windows.Forms.Label();
             studentNameLabel = new System.Windows.Forms.Label();
             classIDLabel = new System.Windows.Forms.Label();
@@ -341,7 +341,8 @@
             this.studentNameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.studentNameTextBox.Name = "studentNameTextBox";
             this.studentNameTextBox.Size = new System.Drawing.Size(296, 34);
-            this.studentNameTextBox.TabIndex = 7;            // 
+            this.studentNameTextBox.TabIndex = 7;
+            // 
             // classIDTextBox
             // 
             this.classIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "ClassID", true));
@@ -461,6 +462,77 @@
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // studentGenderTextBox
+            // 
+            this.studentGenderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "StudentGender", true));
+            this.studentGenderTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentGenderTextBox.Location = new System.Drawing.Point(208, 295);
+            this.studentGenderTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.studentGenderTextBox.Name = "studentGenderTextBox";
+            this.studentGenderTextBox.Size = new System.Drawing.Size(158, 34);
+            this.studentGenderTextBox.TabIndex = 13;
+            // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.Teal;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("JetBrains Mono NL", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.HomeButton.Image = global::StudentManagementSystem.Properties.Resources.house_48;
+            this.HomeButton.Location = new System.Drawing.Point(30, 21);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(60, 60);
+            this.HomeButton.TabIndex = 21;
+            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "StudentGender";
+            this.dataGridViewTextBoxColumn5.FillWeight = 98.26205F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Giới tính";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "StudentDoB";
+            this.dataGridViewTextBoxColumn4.FillWeight = 98.26205F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày sinh";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ClassID";
+            this.dataGridViewTextBoxColumn3.FillWeight = 98.26205F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Mã lớp";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "StudentName";
+            this.dataGridViewTextBoxColumn2.FillWeight = 98.26205F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Họ tên";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "StudentID";
+            this.dataGridViewTextBoxColumn1.FillWeight = 30F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // studentsDataGridView
             // 
             this.studentsDataGridView.AllowUserToAddRows = false;
@@ -508,77 +580,6 @@
             this.studentsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.studentsDataGridView.Size = new System.Drawing.Size(714, 496);
             this.studentsDataGridView.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "StudentID";
-            this.dataGridViewTextBoxColumn1.FillWeight = 30F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "StudentName";
-            this.dataGridViewTextBoxColumn2.FillWeight = 98.26205F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Họ tên";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ClassID";
-            this.dataGridViewTextBoxColumn3.FillWeight = 98.26205F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Mã lớp";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "StudentDoB";
-            this.dataGridViewTextBoxColumn4.FillWeight = 98.26205F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày sinh";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "StudentGender";
-            this.dataGridViewTextBoxColumn5.FillWeight = 98.26205F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Giới tính";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // studentGenderTextBox
-            // 
-            this.studentGenderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "StudentGender", true));
-            this.studentGenderTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentGenderTextBox.Location = new System.Drawing.Point(208, 295);
-            this.studentGenderTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.studentGenderTextBox.Name = "studentGenderTextBox";
-            this.studentGenderTextBox.Size = new System.Drawing.Size(158, 34);
-            this.studentGenderTextBox.TabIndex = 13;
-            // 
-            // HomeButton
-            // 
-            this.HomeButton.BackColor = System.Drawing.Color.Teal;
-            this.HomeButton.FlatAppearance.BorderSize = 0;
-            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Font = new System.Drawing.Font("JetBrains Mono NL", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.HomeButton.Image = global::StudentManagementSystem.Properties.Resources.house_48;
-            this.HomeButton.Location = new System.Drawing.Point(30, 21);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(60, 60);
-            this.HomeButton.TabIndex = 21;
-            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.HomeButton.UseVisualStyleBackColor = false;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // StudentsForm
             // 
@@ -655,14 +656,14 @@
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button PreviousButton;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.DataGridView studentsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TextBox studentGenderTextBox;
         private System.Windows.Forms.Button HomeButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView studentsDataGridView;
     }
 }
 
