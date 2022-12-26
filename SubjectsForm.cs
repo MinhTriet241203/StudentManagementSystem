@@ -19,7 +19,6 @@ namespace StudentManagementSystem
             this.Validate();
             this.subjectsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.studentManageDataSet);
-
         }
 
         private void SubjectsForm_Load(object sender, System.EventArgs e)

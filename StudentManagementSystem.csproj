@@ -185,10 +185,10 @@
     <None Include="Resources\arrow-88-64.png" />
     <None Include="Resources\arrow-24-64.png" />
     <Content Include="StudentManage.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="StudentManage_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>StudentManage.mdf</DependentUpon>
     </Content>
   </ItemGroup>
