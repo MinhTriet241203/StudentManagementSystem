@@ -29,37 +29,65 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label subjectIDLabel;
+            System.Windows.Forms.Label subjectNameLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubjectsForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.subjectsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.subjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentManageDataSet = new StudentManagementSystem.StudentManageDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.subjectsDataGridView = new System.Windows.Forms.DataGridView();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.subjectsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.subjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentManageDataSet = new StudentManagementSystem.StudentManageDataSet();
+            this.subjectsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subjectsTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.SubjectsTableAdapter();
             this.tableAdapterManager = new StudentManagementSystem.StudentManageDataSetTableAdapters.TableAdapterManager();
+            this.subjectIDTextBox = new System.Windows.Forms.TextBox();
+            this.subjectNameTextBox = new System.Windows.Forms.TextBox();
+            subjectIDLabel = new System.Windows.Forms.Label();
+            subjectNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingNavigator)).BeginInit();
             this.subjectsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectsDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // subjectIDLabel
+            // 
+            subjectIDLabel.AutoSize = true;
+            subjectIDLabel.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            subjectIDLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            subjectIDLabel.Location = new System.Drawing.Point(66, 193);
+            subjectIDLabel.Name = "subjectIDLabel";
+            subjectIDLabel.Size = new System.Drawing.Size(144, 26);
+            subjectIDLabel.TabIndex = 4;
+            subjectIDLabel.Text = "Subject ID:";
+            // 
+            // subjectNameLabel
+            // 
+            subjectNameLabel.AutoSize = true;
+            subjectNameLabel.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            subjectNameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            subjectNameLabel.Location = new System.Drawing.Point(66, 253);
+            subjectNameLabel.Name = "subjectNameLabel";
+            subjectNameLabel.Size = new System.Drawing.Size(168, 26);
+            subjectNameLabel.TabIndex = 6;
+            subjectNameLabel.Text = "Subject Name:";
             // 
             // label1
             // 
@@ -67,7 +95,7 @@
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(16, 9);
+            this.label1.Location = new System.Drawing.Point(18, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1237, 103);
             this.label1.TabIndex = 0;
@@ -110,7 +138,7 @@
             this.bindingNavigatorDeleteItem,
             this.toolStripSeparator2,
             this.subjectsBindingNavigatorSaveItem});
-            this.subjectsBindingNavigator.Location = new System.Drawing.Point(0, 626);
+            this.subjectsBindingNavigator.Location = new System.Drawing.Point(0, 630);
             this.subjectsBindingNavigator.MoveFirstItem = null;
             this.subjectsBindingNavigator.MoveLastItem = null;
             this.subjectsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -118,9 +146,29 @@
             this.subjectsBindingNavigator.Name = "subjectsBindingNavigator";
             this.subjectsBindingNavigator.Padding = new System.Windows.Forms.Padding(0);
             this.subjectsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.subjectsBindingNavigator.Size = new System.Drawing.Size(1269, 47);
+            this.subjectsBindingNavigator.Size = new System.Drawing.Size(1273, 47);
             this.subjectsBindingNavigator.TabIndex = 2;
             this.subjectsBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bindingNavigatorAddNewItem.Image = global::StudentManagementSystem.Properties.Resources.plus_4_64;
+            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(84, 44);
+            this.bindingNavigatorAddNewItem.Text = "Thêm";
+            // 
+            // subjectsBindingSource
+            // 
+            this.subjectsBindingSource.DataMember = "Subjects";
+            this.subjectsBindingSource.DataSource = this.studentManageDataSet;
+            // 
+            // studentManageDataSet
+            // 
+            this.studentManageDataSet.DataSetName = "StudentManageDataSet";
+            this.studentManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -129,6 +177,26 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(120, 44);
             this.bindingNavigatorCountItem.Text = "trong {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bindingNavigatorDeleteItem.Image = global::StudentManagementSystem.Properties.Resources.trash_10_64;
+            this.bindingNavigatorDeleteItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(72, 44);
+            this.bindingNavigatorDeleteItem.Text = "Xoá";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bindingNavigatorMovePreviousItem.Image = global::StudentManagementSystem.Properties.Resources.arrow_88_64;
+            this.bindingNavigatorMovePreviousItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(96, 44);
+            this.bindingNavigatorMovePreviousItem.Text = "Trước";
             // 
             // bindingNavigatorSeparator
             // 
@@ -153,15 +221,47 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 47);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bindingNavigatorMoveNextItem.Image = global::StudentManagementSystem.Properties.Resources.arrow_24_64;
+            this.bindingNavigatorMoveNextItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(72, 44);
+            this.bindingNavigatorMoveNextItem.Text = "Sau";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
+            // 
+            // subjectsBindingNavigatorSaveItem
+            // 
+            this.subjectsBindingNavigatorSaveItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.subjectsBindingNavigatorSaveItem.Image = global::StudentManagementSystem.Properties.Resources.save_64;
+            this.subjectsBindingNavigatorSaveItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.subjectsBindingNavigatorSaveItem.Name = "subjectsBindingNavigatorSaveItem";
+            this.subjectsBindingNavigatorSaveItem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.subjectsBindingNavigatorSaveItem.Size = new System.Drawing.Size(190, 44);
+            this.subjectsBindingNavigatorSaveItem.Text = "Lưu thay đổi";
+            this.subjectsBindingNavigatorSaveItem.Click += new System.EventHandler(this.subjectsBindingNavigatorSaveItem_Click);
+            // 
             // subjectsDataGridView
             // 
             this.subjectsDataGridView.AutoGenerateColumns = false;
             this.subjectsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.subjectsDataGridView.BackgroundColor = System.Drawing.Color.CadetBlue;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,82 +284,16 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.subjectsDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.subjectsDataGridView.Location = new System.Drawing.Point(555, 161);
+            this.subjectsDataGridView.MultiSelect = false;
             this.subjectsDataGridView.Name = "subjectsDataGridView";
+            this.subjectsDataGridView.ReadOnly = true;
             this.subjectsDataGridView.RowHeadersWidth = 51;
             this.subjectsDataGridView.RowTemplate.Height = 24;
+            this.subjectsDataGridView.RowTemplate.ReadOnly = true;
+            this.subjectsDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subjectsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.subjectsDataGridView.Size = new System.Drawing.Size(698, 449);
             this.subjectsDataGridView.TabIndex = 3;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bindingNavigatorAddNewItem.Image = global::StudentManagementSystem.Properties.Resources.plus_4_64;
-            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(84, 44);
-            this.bindingNavigatorAddNewItem.Text = "Thêm";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bindingNavigatorDeleteItem.Image = global::StudentManagementSystem.Properties.Resources.trash_10_64;
-            this.bindingNavigatorDeleteItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(72, 44);
-            this.bindingNavigatorDeleteItem.Text = "Xoá";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bindingNavigatorMovePreviousItem.Image = global::StudentManagementSystem.Properties.Resources.arrow_88_64;
-            this.bindingNavigatorMovePreviousItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(96, 44);
-            this.bindingNavigatorMovePreviousItem.Text = "Trước";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bindingNavigatorMoveNextItem.Image = global::StudentManagementSystem.Properties.Resources.arrow_24_64;
-            this.bindingNavigatorMoveNextItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(72, 44);
-            this.bindingNavigatorMoveNextItem.Text = "Sau";
-            // 
-            // subjectsBindingNavigatorSaveItem
-            // 
-            this.subjectsBindingNavigatorSaveItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.subjectsBindingNavigatorSaveItem.Image = global::StudentManagementSystem.Properties.Resources.save_64;
-            this.subjectsBindingNavigatorSaveItem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.subjectsBindingNavigatorSaveItem.Name = "subjectsBindingNavigatorSaveItem";
-            this.subjectsBindingNavigatorSaveItem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.subjectsBindingNavigatorSaveItem.Size = new System.Drawing.Size(190, 44);
-            this.subjectsBindingNavigatorSaveItem.Text = "Lưu thay đổi";
-            this.subjectsBindingNavigatorSaveItem.Click += new System.EventHandler(this.subjectsBindingNavigatorSaveItem_Click);
-            // 
-            // subjectsBindingSource
-            // 
-            this.subjectsBindingSource.DataMember = "Subjects";
-            this.subjectsBindingSource.DataSource = this.studentManageDataSet;
-            // 
-            // studentManageDataSet
-            // 
-            this.studentManageDataSet.DataSetName = "StudentManageDataSet";
-            this.studentManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -275,6 +309,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "SubjectName";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // subjectsTableAdapter
             // 
@@ -289,20 +324,45 @@
             this.tableAdapterManager.SubjectsTableAdapter = this.subjectsTableAdapter;
             this.tableAdapterManager.UpdateOrder = StudentManagementSystem.StudentManageDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // subjectIDTextBox
+            // 
+            this.subjectIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectsBindingSource, "SubjectID", true));
+            this.subjectIDTextBox.Enabled = false;
+            this.subjectIDTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectIDTextBox.Location = new System.Drawing.Point(282, 190);
+            this.subjectIDTextBox.Name = "subjectIDTextBox";
+            this.subjectIDTextBox.Size = new System.Drawing.Size(218, 34);
+            this.subjectIDTextBox.TabIndex = 5;
+            // 
+            // subjectNameTextBox
+            // 
+            this.subjectNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectsBindingSource, "SubjectName", true));
+            this.subjectNameTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectNameTextBox.Location = new System.Drawing.Point(282, 250);
+            this.subjectNameTextBox.Name = "subjectNameTextBox";
+            this.subjectNameTextBox.Size = new System.Drawing.Size(218, 34);
+            this.subjectNameTextBox.TabIndex = 7;
+            // 
             // SubjectsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1269, 673);
+            this.ClientSize = new System.Drawing.Size(1273, 677);
+            this.Controls.Add(subjectIDLabel);
+            this.Controls.Add(this.subjectIDTextBox);
+            this.Controls.Add(subjectNameLabel);
+            this.Controls.Add(this.subjectNameTextBox);
             this.Controls.Add(this.subjectsBindingNavigator);
             this.Controls.Add(this.subjectsDataGridView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "SubjectsForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin môn học ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubjectsForm_FormClosing);
@@ -310,10 +370,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingNavigator)).EndInit();
             this.subjectsBindingNavigator.ResumeLayout(false);
             this.subjectsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectsDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -341,6 +402,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.TextBox subjectIDTextBox;
+        private System.Windows.Forms.TextBox subjectNameTextBox;
     }
 }
 
