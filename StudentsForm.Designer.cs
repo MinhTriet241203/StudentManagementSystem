@@ -35,10 +35,10 @@
             System.Windows.Forms.Label studentDoBLabel;
             System.Windows.Forms.Label studentGenderLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.studentManageDataSet = new StudentManagementSystem.StudentManageDataSet();
@@ -319,7 +319,7 @@
             this.studentsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.studentsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("studentsBindingNavigatorSaveItem.Image")));
             this.studentsBindingNavigatorSaveItem.Name = "studentsBindingNavigatorSaveItem";
-            this.studentsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.studentsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.studentsBindingNavigatorSaveItem.Text = "Save Data";
             this.studentsBindingNavigatorSaveItem.Click += new System.EventHandler(this.studentsBindingNavigatorSaveItem_Click);
             // 
@@ -341,9 +341,7 @@
             this.studentNameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.studentNameTextBox.Name = "studentNameTextBox";
             this.studentNameTextBox.Size = new System.Drawing.Size(296, 34);
-            this.studentNameTextBox.TabIndex = 7;
-            this.studentNameTextBox.TextChanged += new System.EventHandler(this.studentNameTextBox_TextChanged);
-            // 
+            this.studentNameTextBox.TabIndex = 7;            // 
             // classIDTextBox
             // 
             this.classIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "ClassID", true));
@@ -373,10 +371,10 @@
             this.SaveButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.SaveButton.Image = global::StudentManagementSystem.Properties.Resources.save_32;
-            this.SaveButton.Location = new System.Drawing.Point(310, 457);
+            this.SaveButton.Location = new System.Drawing.Point(257, 457);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(194, 68);
+            this.SaveButton.Size = new System.Drawing.Size(247, 68);
             this.SaveButton.TabIndex = 16;
             this.SaveButton.Text = "Lưu";
             this.SaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -393,10 +391,10 @@
             this.DeleteButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.DeleteButton.Image = global::StudentManagementSystem.Properties.Resources.delete_32;
-            this.DeleteButton.Location = new System.Drawing.Point(310, 551);
+            this.DeleteButton.Location = new System.Drawing.Point(257, 551);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(194, 68);
+            this.DeleteButton.Size = new System.Drawing.Size(247, 68);
             this.DeleteButton.TabIndex = 17;
             this.DeleteButton.Text = "Xoá";
             this.DeleteButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -451,10 +449,10 @@
             this.AddButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.AddButton.Image = global::StudentManagementSystem.Properties.Resources.plus_4_32;
-            this.AddButton.Location = new System.Drawing.Point(310, 361);
+            this.AddButton.Location = new System.Drawing.Point(257, 361);
             this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(194, 68);
+            this.AddButton.Size = new System.Drawing.Size(247, 68);
             this.AddButton.TabIndex = 20;
             this.AddButton.Text = "Tạo mới";
             this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -467,19 +465,19 @@
             // 
             this.studentsDataGridView.AllowUserToAddRows = false;
             this.studentsDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.studentsDataGridView.AutoGenerateColumns = false;
             this.studentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.studentsDataGridView.BackgroundColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.studentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -488,14 +486,14 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.studentsDataGridView.DataSource = this.studentsBindingSource;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.studentsDataGridView.Location = new System.Drawing.Point(520, 123);
             this.studentsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.studentsDataGridView.MultiSelect = false;
@@ -503,8 +501,8 @@
             this.studentsDataGridView.ReadOnly = true;
             this.studentsDataGridView.RowHeadersVisible = false;
             this.studentsDataGridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.studentsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentsDataGridView.RowTemplate.ReadOnly = true;
             this.studentsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -565,7 +563,6 @@
             this.studentGenderTextBox.Name = "studentGenderTextBox";
             this.studentGenderTextBox.Size = new System.Drawing.Size(158, 34);
             this.studentGenderTextBox.TabIndex = 13;
-            this.studentGenderTextBox.TextChanged += new System.EventHandler(this.studentGenderTextBox_TextChanged);
             // 
             // HomeButton
             // 

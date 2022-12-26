@@ -26,7 +26,6 @@ namespace StudentManagementSystem
         {
             // TODO: This line of code loads data into the 'studentManageDataSet.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.studentManageDataSet.Students);
-
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -38,7 +37,18 @@ namespace StudentManagementSystem
         {
             var result = MessageBox.Show("Xác nhận lưu thay đổi?", "Thông báo", MessageBoxButtons.YesNo);
             if(result == DialogResult.Yes) { return; }
-            studentsBindingNavigatorSaveItem.PerformClick();
+            try
+            {
+                //gọi navigator save item và gọi lệnh nhấn vào, thay thế cho nhấn trực tiếp vào nút
+                studentsBindingNavigatorSaveItem.PerformClick();
+                MessageBox.Show("Lưu thay đổi thành công", "Thông báo");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không thể lưu, hãy hoàn tất điền thông tin", "Thông báo");
+                return;
+            }
+            
             MessageBox.Show("Lưu thay đổi thành công", "Thông báo");
         }
 
@@ -52,22 +62,21 @@ namespace StudentManagementSystem
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            bindingNavigatorMoveNextItem.PerformClick();
+            try
+            {
+
+                bindingNavigatorMoveNextItem.PerformClick();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không thể thay đổi lựa chọn lúc này", "Thông báo");
+                return;
+            }
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
             bindingNavigatorMovePreviousItem.PerformClick();
-        }
-
-        private void studentNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void studentGenderTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

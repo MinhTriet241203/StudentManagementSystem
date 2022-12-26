@@ -44,18 +44,18 @@ namespace StudentManagementSystem
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("", "", MessageBoxButtons.YesNo);
-            if(result== DialogResult.Yes) { return; }
+            var result = MessageBox.Show("Lưu thay đổi?", "Thông báo", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes) { return; }
             classesBindingNavigatorSaveItem.PerformClick();
-            MessageBox.Show("", "");
+            MessageBox.Show("Lưu thay đổi thành công", "Thông báo");
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("", "", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Xoá lựa chọn?", "Thông báo", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes) { return; }
             bindingNavigatorDeleteItem.PerformClick();
-            MessageBox.Show("", "");
+            MessageBox.Show("Xoá lựa chọn thành công", "Thông báo");
         }
 
         private void NextButton_Click(object sender, EventArgs e)

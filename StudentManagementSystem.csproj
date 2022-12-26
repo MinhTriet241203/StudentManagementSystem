@@ -151,7 +151,6 @@
     </None>
     <None Include="StudentManageDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StudentManageDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="StudentManageDataSet.xss">
