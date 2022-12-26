@@ -65,7 +65,8 @@ namespace StudentManagementSystem
         private void HomeButton_Click(object sender, System.EventArgs e)
         {
             this.Hide();
-            
+            Home home = new Home();
+            home.Show();
         }
     }
 }

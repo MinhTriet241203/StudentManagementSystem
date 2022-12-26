@@ -16,35 +16,56 @@ namespace StudentManagementSystem
         public StudentsForm()
         {
             InitializeComponent();
-
-            SqlConnection connection;
-            SqlCommand command;
-            SqlDataReader dataReader;
-            string connetionString = "Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
-            string sql = "Your SQL Statement Here , like Select * from product";
-            connection = new SqlConnection(connetionString);
-            try
-            {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                dataReader = command.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    MessageBox.Show(dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2));
-                }
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }
         }
 
         private void StudentsForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void studentsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.studentsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManageDataSet);
+        }
+
+        private void StudentsForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'studentManageDataSet.Students' table. You can move, or remove it, as needed.
+            this.studentsTableAdapter.Fill(this.studentManageDataSet.Students);
+
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Xác nhận lưu thay đổi?", "Thông báo", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes) { return; }
+            studentsBindingNavigatorSaveItem.PerformClick();
+            MessageBox.Show("Lưu thay đổi thành công", "Thông báo");
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Xác nhận xóa học sinh?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes) { return; }
+            bindingNavigatorDeleteItem.PerformClick();
+            MessageBox.Show("Xóa học sinh thành công", "Thông báo");
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorMoveNextItem.PerformClick();
+        }
+
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorMovePreviousItem.PerformClick();
         }
     }
 }
