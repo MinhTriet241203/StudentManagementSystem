@@ -26,7 +26,6 @@ namespace StudentManagementSystem
         {
             // TODO: This line of code loads data into the 'studentManageDataSet.Subjects' table. You can move, or remove it, as needed.
             this.subjectsTableAdapter.Fill(this.studentManageDataSet.Subjects);
-
         }
 
         private void AddButton_Click(object sender, System.EventArgs e)
@@ -55,7 +54,6 @@ namespace StudentManagementSystem
                 MessageBox.Show("Không thể lưu, hãy hoàn tất điền thông tin", "Thông báo");
                 return;
             }
-
         }
 
         private void DeleteButton_Click(object sender, System.EventArgs e)
@@ -63,10 +61,15 @@ namespace StudentManagementSystem
             //đưa ra 2 trường hợp huỷ hoặc xoá, nếu người dùng nhấn tạo mới trước đó thì nút xoá đổi thành nút huỷ
             //và thông báo cũng thay đổi tương tự
 
-            string confirmMessage = "Xác nhận xoá lựa chọn";
-            string successMessage = "Xoá lựa chọn thành công";
+            string confirmMessage = "Xác nhận xoá môn học";
+            string successMessage = "Xoá môn học thành công";
+
             if (DeleteButton.Text == "Huỷ")
-            { confirmMessage = "Xác nhận huỷ?"; successMessage = "Đã huỷ tạo mới"; }
+            {
+                confirmMessage = "Xác nhận huỷ tạo mới?";
+                successMessage = "Đã huỷ tạo mới";
+            }
+
             var result = MessageBox.Show(confirmMessage, "Thông báo", MessageBoxButtons.YesNo);
 
             if (result != DialogResult.Yes) return; //huỷ nếu không chọn yes

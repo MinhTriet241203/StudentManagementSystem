@@ -407,9 +407,9 @@ namespace StudentManagementSystem {
             
             private global::System.Data.DataColumn columnClassID;
             
-            private global::System.Data.DataColumn columnNumberOfStudents;
-            
             private global::System.Data.DataColumn columnAcademicYear;
+            
+            private global::System.Data.DataColumn columnClassName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -454,17 +454,17 @@ namespace StudentManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NumberOfStudentsColumn {
+            public global::System.Data.DataColumn AcademicYearColumn {
                 get {
-                    return this.columnNumberOfStudents;
+                    return this.columnAcademicYear;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AcademicYearColumn {
+            public global::System.Data.DataColumn ClassNameColumn {
                 get {
-                    return this.columnAcademicYear;
+                    return this.columnClassName;
                 }
             }
             
@@ -505,12 +505,12 @@ namespace StudentManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClassesRow AddClassesRow(int NumberOfStudents, string AcademicYear) {
+            public ClassesRow AddClassesRow(string AcademicYear, string ClassName) {
                 ClassesRow rowClassesRow = ((ClassesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        NumberOfStudents,
-                        AcademicYear};
+                        AcademicYear,
+                        ClassName};
                 rowClassesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowClassesRow);
                 return rowClassesRow;
@@ -541,8 +541,8 @@ namespace StudentManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnClassID = base.Columns["ClassID"];
-                this.columnNumberOfStudents = base.Columns["NumberOfStudents"];
                 this.columnAcademicYear = base.Columns["AcademicYear"];
+                this.columnClassName = base.Columns["ClassName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -550,10 +550,10 @@ namespace StudentManagementSystem {
             private void InitClass() {
                 this.columnClassID = new global::System.Data.DataColumn("ClassID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClassID);
-                this.columnNumberOfStudents = new global::System.Data.DataColumn("NumberOfStudents", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumberOfStudents);
                 this.columnAcademicYear = new global::System.Data.DataColumn("AcademicYear", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAcademicYear);
+                this.columnClassName = new global::System.Data.DataColumn("ClassName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClassName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnClassID}, true));
                 this.columnClassID.AutoIncrement = true;
@@ -562,8 +562,9 @@ namespace StudentManagementSystem {
                 this.columnClassID.AllowDBNull = false;
                 this.columnClassID.ReadOnly = true;
                 this.columnClassID.Unique = true;
-                this.columnNumberOfStudents.AllowDBNull = false;
                 this.columnAcademicYear.MaxLength = 15;
+                this.columnClassName.AllowDBNull = false;
+                this.columnClassName.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1660,17 +1661,6 @@ namespace StudentManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int NumberOfStudents {
-                get {
-                    return ((int)(this[this.tableClasses.NumberOfStudentsColumn]));
-                }
-                set {
-                    this[this.tableClasses.NumberOfStudentsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string AcademicYear {
                 get {
                     try {
@@ -1682,6 +1672,17 @@ namespace StudentManagementSystem {
                 }
                 set {
                     this[this.tableClasses.AcademicYearColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ClassName {
+                get {
+                    return ((string)(this[this.tableClasses.ClassNameColumn]));
+                }
+                set {
+                    this[this.tableClasses.ClassNameColumn] = value;
                 }
             }
             
@@ -2299,38 +2300,38 @@ namespace StudentManagementSystem.StudentManageDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Classes";
             tableMapping.ColumnMappings.Add("ClassID", "ClassID");
-            tableMapping.ColumnMappings.Add("NumberOfStudents", "NumberOfStudents");
             tableMapping.ColumnMappings.Add("AcademicYear", "AcademicYear");
+            tableMapping.ColumnMappings.Add("ClassName", "ClassName");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Classes] WHERE (([ClassID] = @Original_ClassID) AND ([NumberOf" +
-                "Students] = @Original_NumberOfStudents) AND ((@IsNull_AcademicYear = 1 AND [Acad" +
-                "emicYear] IS NULL) OR ([AcademicYear] = @Original_AcademicYear)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Classes] WHERE (([ClassID] = @Original_ClassID) AND ((@IsNull_Academ" +
+                "icYear = 1 AND [AcademicYear] IS NULL) OR ([AcademicYear] = @Original_AcademicYe" +
+                "ar)) AND ([ClassName] = @Original_ClassName))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumberOfStudents", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumberOfStudents", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AcademicYear", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AcademicYear", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AcademicYear", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AcademicYear", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Classes] ([NumberOfStudents], [AcademicYear]) VALUES (@NumberO" +
-                "fStudents, @AcademicYear);\r\nSELECT ClassID, NumberOfStudents, AcademicYear FROM " +
-                "Classes WHERE (ClassID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Classes] ([AcademicYear], [ClassName]) VALUES (@AcademicYear, @Class" +
+                "Name);\r\nSELECT ClassID, AcademicYear, ClassName FROM Classes WHERE (ClassID = SC" +
+                "OPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumberOfStudents", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumberOfStudents", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AcademicYear", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AcademicYear", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Classes] SET [NumberOfStudents] = @NumberOfStudents, [AcademicYear] = @AcademicYear WHERE (([ClassID] = @Original_ClassID) AND ([NumberOfStudents] = @Original_NumberOfStudents) AND ((@IsNull_AcademicYear = 1 AND [AcademicYear] IS NULL) OR ([AcademicYear] = @Original_AcademicYear)));
-SELECT ClassID, NumberOfStudents, AcademicYear FROM Classes WHERE (ClassID = @ClassID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Classes] SET [AcademicYear] = @AcademicYear, [ClassName] = @ClassName WHERE (([ClassID] = @Original_ClassID) AND ((@IsNull_AcademicYear = 1 AND [AcademicYear] IS NULL) OR ([AcademicYear] = @Original_AcademicYear)) AND ([ClassName] = @Original_ClassName));
+SELECT ClassID, AcademicYear, ClassName FROM Classes WHERE (ClassID = @ClassID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumberOfStudents", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumberOfStudents", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AcademicYear", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AcademicYear", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumberOfStudents", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumberOfStudents", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AcademicYear", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AcademicYear", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AcademicYear", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AcademicYear", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClassID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2347,7 +2348,7 @@ SELECT ClassID, NumberOfStudents, AcademicYear FROM Classes WHERE (ClassID = @Cl
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ClassID, NumberOfStudents, AcademicYear FROM dbo.Classes";
+            this._commandCollection[0].CommandText = "SELECT ClassID, AcademicYear, ClassName FROM Classes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2408,16 +2409,21 @@ SELECT ClassID, NumberOfStudents, AcademicYear FROM Classes WHERE (ClassID = @Cl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ClassID, int Original_NumberOfStudents, string Original_AcademicYear) {
+        public virtual int Delete(int Original_ClassID, string Original_AcademicYear, string Original_ClassName) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ClassID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_NumberOfStudents));
             if ((Original_AcademicYear == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_AcademicYear));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_AcademicYear));
+            }
+            if ((Original_ClassName == null)) {
+                throw new global::System.ArgumentNullException("Original_ClassName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_ClassName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2439,13 +2445,18 @@ SELECT ClassID, NumberOfStudents, AcademicYear FROM Classes WHERE (ClassID = @Cl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int NumberOfStudents, string AcademicYear) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(NumberOfStudents));
+        public virtual int Insert(string AcademicYear, string ClassName) {
             if ((AcademicYear == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(AcademicYear));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(AcademicYear));
+            }
+            if ((ClassName == null)) {
+                throw new global::System.ArgumentNullException("ClassName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ClassName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2467,23 +2478,33 @@ SELECT ClassID, NumberOfStudents, AcademicYear FROM Classes WHERE (ClassID = @Cl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int NumberOfStudents, string AcademicYear, int Original_ClassID, int Original_NumberOfStudents, string Original_AcademicYear, int ClassID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(NumberOfStudents));
+        public virtual int Update(string AcademicYear, string ClassName, int Original_ClassID, string Original_AcademicYear, string Original_ClassName, int ClassID) {
             if ((AcademicYear == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(AcademicYear));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(AcademicYear));
+            }
+            if ((ClassName == null)) {
+                throw new global::System.ArgumentNullException("ClassName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ClassName));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ClassID));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_NumberOfStudents));
             if ((Original_AcademicYear == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_AcademicYear));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_AcademicYear));
+            }
+            if ((Original_ClassName == null)) {
+                throw new global::System.ArgumentNullException("Original_ClassName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_ClassName));
             }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ClassID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -2506,8 +2527,8 @@ SELECT ClassID, NumberOfStudents, AcademicYear FROM Classes WHERE (ClassID = @Cl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int NumberOfStudents, string AcademicYear, int Original_ClassID, int Original_NumberOfStudents, string Original_AcademicYear) {
-            return this.Update(NumberOfStudents, AcademicYear, Original_ClassID, Original_NumberOfStudents, Original_AcademicYear, Original_ClassID);
+        public virtual int Update(string AcademicYear, string ClassName, int Original_ClassID, string Original_AcademicYear, string Original_ClassName) {
+            return this.Update(AcademicYear, ClassName, Original_ClassID, Original_AcademicYear, Original_ClassName, Original_ClassID);
         }
     }
     

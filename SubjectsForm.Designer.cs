@@ -94,7 +94,7 @@
             subjectNameLabel1.AutoSize = true;
             subjectNameLabel1.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             subjectNameLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            subjectNameLabel1.Location = new System.Drawing.Point(56, 228);
+            subjectNameLabel1.Location = new System.Drawing.Point(26, 228);
             subjectNameLabel1.Name = "subjectNameLabel1";
             subjectNameLabel1.Size = new System.Drawing.Size(108, 26);
             subjectNameLabel1.TabIndex = 10;
@@ -105,7 +105,7 @@
             semesterLabel.AutoSize = true;
             semesterLabel.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             semesterLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            semesterLabel.Location = new System.Drawing.Point(56, 290);
+            semesterLabel.Location = new System.Drawing.Point(26, 290);
             semesterLabel.Name = "semesterLabel";
             semesterLabel.Size = new System.Drawing.Size(96, 26);
             semesterLabel.TabIndex = 12;
