@@ -17,44 +17,44 @@ namespace StudentManagementSystem
             InitializeComponent();
         }
 
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void HocSinh_Click(object sender, EventArgs e)
         {
-            StudentsForm stsForm = new StudentsForm();
+            StudentsForm studentsForm = new StudentsForm();
             this.Hide();
-            stsForm.Show();
+            studentsForm.Show();
         }
 
         private void LopHoc_Click(object sender, EventArgs e)
         {
-            ClassesForm clForm = new ClassesForm();
+            ClassesForm classesForm = new ClassesForm();
             this.Hide();
-            clForm.Show();
+            classesForm.Show();
         }
 
         private void MonHoc_Click(object sender, EventArgs e)
         {
-            SubjectsForm sjForm = new SubjectsForm();
+            SubjectsForm subjectsForm = new SubjectsForm();
             this.Hide();
-            sjForm.Show();
+            subjectsForm.Show();
         }
 
         private void DiemSo_Click(object sender, EventArgs e)
         {
-            ScoresForm scForm = new ScoresForm();
+            ScoresForm scoresForm = new ScoresForm();
             this.Hide();
-            scForm.Show();
+            scoresForm.Show();
         }
 
         private void ThongKe_Click(object sender, EventArgs e)
         {
-            StatisticsForm stForm = new StatisticsForm();
+            StatisticsForm statisticsForm = new StatisticsForm();
             this.Hide();
-            stForm.Show();
-        }
-
-        private void Home_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
+            statisticsForm.Show();
         }
     }
 }

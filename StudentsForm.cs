@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace StudentManagementSystem
 {
-    public partial class ClassesForm : Form
+    public partial class StudentsForm : Form
     {
-        public ClassesForm()
+        public StudentsForm()
         {
             InitializeComponent();
         }
 
-        private void ClassesForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void StudentsForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

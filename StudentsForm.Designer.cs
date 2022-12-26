@@ -1,6 +1,6 @@
 ﻿namespace StudentManagementSystem
 {
-    partial class ClassesForm
+    partial class StudentsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassesForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -44,7 +44,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(928, 84);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thông tin lớp học";
+            this.label1.Text = "Thông tin học sinh";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -57,7 +57,7 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "\r\n";
             // 
-            // ClassesForm
+            // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,10 +67,10 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "ClassesForm";
+            this.Name = "StudentsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý thông tin lớp học";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClassesForm_FormClosing);
+            this.Text = "Quản lý thông tin học sinh";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentsForm_FormClosing);
             this.ResumeLayout(false);
 
         }

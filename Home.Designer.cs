@@ -42,7 +42,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.CausesValidation = false;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -51,7 +51,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Trang chủ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -62,7 +61,6 @@
             this.label2.Size = new System.Drawing.Size(928, 2);
             this.label2.TabIndex = 1;
             this.label2.Text = "\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ThongKe
             // 
@@ -72,7 +70,7 @@
             this.ThongKe.FlatAppearance.BorderSize = 0;
             this.ThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
             this.ThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThongKe.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThongKe.ForeColor = System.Drawing.Color.Transparent;
             this.ThongKe.Image = global::StudentManagementSystem.Properties.Resources.pie_chart_128;
             this.ThongKe.Location = new System.Drawing.Point(773, 170);
@@ -84,6 +82,7 @@
             this.ThongKe.Text = "Thống kê";
             this.ThongKe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ThongKe.UseVisualStyleBackColor = false;
+            this.ThongKe.Click += new System.EventHandler(this.ThongKe_Click);
             // 
             // DiemSo
             // 
@@ -93,7 +92,7 @@
             this.DiemSo.FlatAppearance.BorderSize = 0;
             this.DiemSo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
             this.DiemSo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DiemSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiemSo.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiemSo.ForeColor = System.Drawing.Color.Transparent;
             this.DiemSo.Image = global::StudentManagementSystem.Properties.Resources.feather_128;
             this.DiemSo.Location = new System.Drawing.Point(580, 170);
@@ -105,6 +104,7 @@
             this.DiemSo.Text = "Điểm số";
             this.DiemSo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.DiemSo.UseVisualStyleBackColor = false;
+            this.DiemSo.Click += new System.EventHandler(this.DiemSo_Click);
             // 
             // MonHoc
             // 
@@ -114,7 +114,7 @@
             this.MonHoc.FlatAppearance.BorderSize = 0;
             this.MonHoc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
             this.MonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonHoc.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonHoc.ForeColor = System.Drawing.Color.Transparent;
             this.MonHoc.Image = global::StudentManagementSystem.Properties.Resources.book_stack_128;
             this.MonHoc.Location = new System.Drawing.Point(391, 170);
@@ -126,6 +126,7 @@
             this.MonHoc.Text = "Môn học";
             this.MonHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.MonHoc.UseVisualStyleBackColor = false;
+            this.MonHoc.Click += new System.EventHandler(this.MonHoc_Click);
             // 
             // LopHoc
             // 
@@ -135,7 +136,7 @@
             this.LopHoc.FlatAppearance.BorderSize = 0;
             this.LopHoc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
             this.LopHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LopHoc.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LopHoc.ForeColor = System.Drawing.Color.Transparent;
             this.LopHoc.Image = global::StudentManagementSystem.Properties.Resources.classroom_2_128;
             this.LopHoc.Location = new System.Drawing.Point(202, 170);
@@ -147,6 +148,7 @@
             this.LopHoc.Text = "Lớp học";
             this.LopHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.LopHoc.UseVisualStyleBackColor = false;
+            this.LopHoc.Click += new System.EventHandler(this.LopHoc_Click);
             // 
             // HocSinh
             // 
@@ -156,7 +158,7 @@
             this.HocSinh.FlatAppearance.BorderSize = 0;
             this.HocSinh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
             this.HocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HocSinh.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HocSinh.ForeColor = System.Drawing.Color.Transparent;
             this.HocSinh.Image = global::StudentManagementSystem.Properties.Resources.student_128;
             this.HocSinh.Location = new System.Drawing.Point(9, 170);
@@ -168,6 +170,7 @@
             this.HocSinh.Text = "Học sinh";
             this.HocSinh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.HocSinh.UseVisualStyleBackColor = false;
+            this.HocSinh.Click += new System.EventHandler(this.HocSinh_Click);
             // 
             // Home
             // 
