@@ -183,6 +183,7 @@
     <None Include="Resources\save-32.png" />
     <None Include="Resources\arrow-88-32.png" />
     <None Include="Resources\arrow-24-32.png" />
+    <None Include="Resources\house-48.png" />
     <Content Include="StudentManagementSystem.sql" />
     <None Include="Resources\save-64.png" />
     <None Include="Resources\trash-10-64.png" />

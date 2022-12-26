@@ -62,6 +62,7 @@
             this.semesterTextBox = new System.Windows.Forms.TextBox();
             this.subjectsTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.SubjectsTableAdapter();
             this.tableAdapterManager = new StudentManagementSystem.StudentManageDataSetTableAdapters.TableAdapterManager();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
@@ -395,6 +396,22 @@
             this.tableAdapterManager.SubjectsTableAdapter = this.subjectsTableAdapter;
             this.tableAdapterManager.UpdateOrder = StudentManagementSystem.StudentManageDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.Teal;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("JetBrains Mono NL", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.HomeButton.Image = global::StudentManagementSystem.Properties.Resources.house_48;
+            this.HomeButton.Location = new System.Drawing.Point(31, 36);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(60, 60);
+            this.HomeButton.TabIndex = 16;
+            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -494,6 +511,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1276, 677);
+            this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.NextButton);
@@ -563,6 +581,7 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button PreviousButton;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button HomeButton;
     }
 }
 
