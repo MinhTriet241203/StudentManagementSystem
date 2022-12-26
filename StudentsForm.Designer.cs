@@ -75,6 +75,8 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
+            this.fKScoresStudentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scoresTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.ScoresTableAdapter();
             studentIDLabel = new System.Windows.Forms.Label();
             studentNameLabel = new System.Windows.Forms.Label();
             classIDLabel = new System.Windows.Forms.Label();
@@ -85,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingNavigator)).BeginInit();
             this.studentsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKScoresStudentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // studentIDLabel
@@ -581,6 +584,15 @@
             this.studentsDataGridView.Size = new System.Drawing.Size(714, 496);
             this.studentsDataGridView.TabIndex = 3;
             // 
+            // fKScoresStudentsBindingSource
+            // 
+            this.fKScoresStudentsBindingSource.DataMember = "FK_Scores_Students";
+            this.fKScoresStudentsBindingSource.DataSource = this.studentsBindingSource;
+            // 
+            // scoresTableAdapter
+            // 
+            this.scoresTableAdapter.ClearBeforeFill = true;
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -621,6 +633,7 @@
             this.studentsBindingNavigator.ResumeLayout(false);
             this.studentsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKScoresStudentsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,6 +677,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView studentsDataGridView;
+        private System.Windows.Forms.BindingSource fKScoresStudentsBindingSource;
+        private StudentManageDataSetTableAdapters.ScoresTableAdapter scoresTableAdapter;
     }
 }
 

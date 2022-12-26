@@ -24,6 +24,8 @@ namespace StudentManagementSystem
 
         private void StudentsForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'studentManageDataSet.Scores' table. You can move, or remove it, as needed.
+            this.scoresTableAdapter.Fill(this.studentManageDataSet.Scores);
             // TODO: This line of code loads data into the 'studentManageDataSet.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.studentManageDataSet.Students);
         }

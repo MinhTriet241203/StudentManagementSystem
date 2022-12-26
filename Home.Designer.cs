@@ -71,7 +71,7 @@
             this.ThongKe.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThongKe.ForeColor = System.Drawing.Color.Transparent;
             this.ThongKe.Image = global::StudentManagementSystem.Properties.Resources.pie_chart_128;
-            this.ThongKe.Location = new System.Drawing.Point(1031, 209);
+            this.ThongKe.Location = new System.Drawing.Point(1017, 209);
             this.ThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ThongKe.Name = "ThongKe";
             this.ThongKe.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
@@ -93,7 +93,7 @@
             this.DiemSo.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiemSo.ForeColor = System.Drawing.Color.Transparent;
             this.DiemSo.Image = global::StudentManagementSystem.Properties.Resources.feather_128;
-            this.DiemSo.Location = new System.Drawing.Point(773, 209);
+            this.DiemSo.Location = new System.Drawing.Point(765, 209);
             this.DiemSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DiemSo.Name = "DiemSo";
             this.DiemSo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
@@ -115,7 +115,7 @@
             this.MonHoc.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonHoc.ForeColor = System.Drawing.Color.Transparent;
             this.MonHoc.Image = global::StudentManagementSystem.Properties.Resources.book_stack_128;
-            this.MonHoc.Location = new System.Drawing.Point(521, 209);
+            this.MonHoc.Location = new System.Drawing.Point(518, 209);
             this.MonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MonHoc.Name = "MonHoc";
             this.MonHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
@@ -137,7 +137,7 @@
             this.LopHoc.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LopHoc.ForeColor = System.Drawing.Color.Transparent;
             this.LopHoc.Image = global::StudentManagementSystem.Properties.Resources.classroom_2_128;
-            this.LopHoc.Location = new System.Drawing.Point(269, 209);
+            this.LopHoc.Location = new System.Drawing.Point(270, 209);
             this.LopHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LopHoc.Name = "LopHoc";
             this.LopHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
@@ -159,7 +159,7 @@
             this.HocSinh.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HocSinh.ForeColor = System.Drawing.Color.Transparent;
             this.HocSinh.Image = global::StudentManagementSystem.Properties.Resources.student_128;
-            this.HocSinh.Location = new System.Drawing.Point(12, 209);
+            this.HocSinh.Location = new System.Drawing.Point(23, 209);
             this.HocSinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HocSinh.Name = "HocSinh";
             this.HocSinh.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
@@ -185,7 +185,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
