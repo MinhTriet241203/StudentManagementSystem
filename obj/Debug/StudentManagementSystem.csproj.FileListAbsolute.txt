@@ -44,3 +44,9 @@ C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.ScoresForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.SubjectsForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.StudentsForm.resources
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManage.mdf
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManage_log.ldf
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.StatisticsForm.resources
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.ScoresForm.resources
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.SubjectsForm.resources
+D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\obj\Debug\StudentManagementSystem.StudentsForm.resources

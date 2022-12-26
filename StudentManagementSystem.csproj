@@ -178,6 +178,12 @@
     <None Include="Resources\pie-chart-128.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="StudentManagementSystem.sql" />
+    <None Include="Resources\save-64.png" />
+    <None Include="Resources\trash-10-64.png" />
+    <None Include="Resources\plus-4-64.png" />
+    <None Include="Resources\arrow-88-64.png" />
+    <None Include="Resources\arrow-24-64.png" />
     <Content Include="StudentManage.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
