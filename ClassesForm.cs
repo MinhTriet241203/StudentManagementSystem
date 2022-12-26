@@ -45,7 +45,7 @@ namespace StudentManagementSystem
         private void SaveButton_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Xác nhận lưu thay đổi", "Thông báo", MessageBoxButtons.YesNo);
-            if(result== DialogResult.Yes) { return; }
+            if(result != DialogResult.Yes) { return; }
             classesBindingNavigatorSaveItem.PerformClick();
             MessageBox.Show("Đã lưu thay đổi", "Thông báo");
         }
@@ -53,7 +53,7 @@ namespace StudentManagementSystem
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Xác nhận xóa lớp học", "Thông báo", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes) { return; }
+            if (result != DialogResult.Yes) { return; }
             bindingNavigatorDeleteItem.PerformClick();
             MessageBox.Show("Xóa lớp học thành công", "Thông báo");
         }
