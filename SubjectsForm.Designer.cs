@@ -420,9 +420,9 @@
             this.SaveButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.SaveButton.Image = global::StudentManagementSystem.Properties.Resources.save_32;
-            this.SaveButton.Location = new System.Drawing.Point(273, 480);
+            this.SaveButton.Location = new System.Drawing.Point(316, 469);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(259, 62);
+            this.SaveButton.Size = new System.Drawing.Size(216, 78);
             this.SaveButton.TabIndex = 15;
             this.SaveButton.Text = "Lưu";
             this.SaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -439,9 +439,9 @@
             this.DeleteButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.DeleteButton.Image = global::StudentManagementSystem.Properties.Resources.delete_32;
-            this.DeleteButton.Location = new System.Drawing.Point(273, 590);
+            this.DeleteButton.Location = new System.Drawing.Point(316, 574);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(259, 62);
+            this.DeleteButton.Size = new System.Drawing.Size(216, 78);
             this.DeleteButton.TabIndex = 15;
             this.DeleteButton.Text = "Xoá";
             this.DeleteButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -494,9 +494,9 @@
             this.AddButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.AddButton.Image = global::StudentManagementSystem.Properties.Resources.plus_4_32;
-            this.AddButton.Location = new System.Drawing.Point(273, 362);
+            this.AddButton.Location = new System.Drawing.Point(316, 360);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(259, 62);
+            this.AddButton.Size = new System.Drawing.Size(216, 78);
             this.AddButton.TabIndex = 15;
             this.AddButton.Text = "Tạo mới";
             this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
