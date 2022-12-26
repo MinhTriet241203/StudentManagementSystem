@@ -849,8 +849,7 @@ namespace StudentManagementSystem {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnClassID}, true));
                 this.columnClassID.AutoIncrement = true;
-                this.columnClassID.AutoIncrementSeed = -1;
-                this.columnClassID.AutoIncrementStep = -1;
+                this.columnClassID.AutoIncrementSeed = 1;
                 this.columnClassID.AllowDBNull = false;
                 this.columnClassID.ReadOnly = true;
                 this.columnClassID.Unique = true;
