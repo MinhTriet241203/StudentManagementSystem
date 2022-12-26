@@ -24,6 +24,8 @@ namespace StudentManagementSystem
 
         private void StudentsForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'studentManageDataSet.Classes' table. You can move, or remove it, as needed.
+            this.classesTableAdapter.Fill(this.studentManageDataSet.Classes);
             // TODO: This line of code loads data into the 'studentManageDataSet.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.studentManageDataSet.Students);
         }
@@ -48,8 +50,6 @@ namespace StudentManagementSystem
                 MessageBox.Show("Không thể lưu, hãy hoàn tất điền thông tin", "Thông báo");
                 return;
             }
-            
-            MessageBox.Show("Lưu thay đổi thành công", "Thông báo");
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -84,6 +84,16 @@ namespace StudentManagementSystem
             this.Hide();
             Home home = new Home();
             home.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.classIDTextBox.Text = comboBox1.SelectedValue.ToString();
+        }
+
+        private void classIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.comboBox1.Text = classIDTextBox.Text;
         }
     }
 }
