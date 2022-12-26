@@ -178,6 +178,11 @@
     <None Include="Resources\pie-chart-128.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\plus-4-32.png" />
+    <None Include="Resources\delete-32.png" />
+    <None Include="Resources\save-32.png" />
+    <None Include="Resources\arrow-88-32.png" />
+    <None Include="Resources\arrow-24-32.png" />
     <Content Include="StudentManagementSystem.sql" />
     <None Include="Resources\save-64.png" />
     <None Include="Resources\trash-10-64.png" />
@@ -185,10 +190,10 @@
     <None Include="Resources\arrow-88-64.png" />
     <None Include="Resources\arrow-24-64.png" />
     <Content Include="StudentManage.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="StudentManage_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>StudentManage.mdf</DependentUpon>
     </Content>
   </ItemGroup>
@@ -203,6 +208,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
