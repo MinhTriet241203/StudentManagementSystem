@@ -69,7 +69,7 @@
             this.MaximizeBox = false;
             this.Name = "ClassesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý thông tin học sinh";
+            this.Text = "Quản lý thông tin lớp học";
             this.ResumeLayout(false);
 
         }
