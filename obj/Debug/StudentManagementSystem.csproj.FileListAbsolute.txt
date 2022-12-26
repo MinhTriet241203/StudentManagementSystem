@@ -44,3 +44,5 @@ C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.ScoresForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.SubjectsForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.StudentsForm.resources
+C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManage.mdf
+C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManage_log.ldf
