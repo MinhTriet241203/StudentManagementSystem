@@ -76,7 +76,7 @@
             this.ThongKe.ForeColor = System.Drawing.Color.Transparent;
             this.ThongKe.Image = global::StudentManagementSystem.Properties.Resources.pie_chart_128;
             this.ThongKe.Location = new System.Drawing.Point(773, 170);
-            this.ThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.ThongKe.Name = "ThongKe";
             this.ThongKe.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.ThongKe.Size = new System.Drawing.Size(164, 274);
@@ -97,7 +97,7 @@
             this.DiemSo.ForeColor = System.Drawing.Color.Transparent;
             this.DiemSo.Image = global::StudentManagementSystem.Properties.Resources.feather_128;
             this.DiemSo.Location = new System.Drawing.Point(580, 170);
-            this.DiemSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DiemSo.Margin = new System.Windows.Forms.Padding(2);
             this.DiemSo.Name = "DiemSo";
             this.DiemSo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.DiemSo.Size = new System.Drawing.Size(164, 274);
@@ -118,7 +118,7 @@
             this.MonHoc.ForeColor = System.Drawing.Color.Transparent;
             this.MonHoc.Image = global::StudentManagementSystem.Properties.Resources.book_stack_128;
             this.MonHoc.Location = new System.Drawing.Point(391, 170);
-            this.MonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.MonHoc.Name = "MonHoc";
             this.MonHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.MonHoc.Size = new System.Drawing.Size(164, 274);
@@ -139,7 +139,7 @@
             this.LopHoc.ForeColor = System.Drawing.Color.Transparent;
             this.LopHoc.Image = global::StudentManagementSystem.Properties.Resources.classroom_2_128;
             this.LopHoc.Location = new System.Drawing.Point(202, 170);
-            this.LopHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LopHoc.Margin = new System.Windows.Forms.Padding(2);
             this.LopHoc.Name = "LopHoc";
             this.LopHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.LopHoc.Size = new System.Drawing.Size(164, 274);
@@ -160,7 +160,7 @@
             this.HocSinh.ForeColor = System.Drawing.Color.Transparent;
             this.HocSinh.Image = global::StudentManagementSystem.Properties.Resources.student_128;
             this.HocSinh.Location = new System.Drawing.Point(9, 170);
-            this.HocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HocSinh.Margin = new System.Windows.Forms.Padding(2);
             this.HocSinh.Name = "HocSinh";
             this.HocSinh.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.HocSinh.Size = new System.Drawing.Size(164, 274);
@@ -186,7 +186,7 @@
             this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lí học sinh";
+            this.Text = "Hệ thống quản lý học sinh";
             this.ResumeLayout(false);
 
         }

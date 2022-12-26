@@ -37,14 +37,14 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.CausesValidation = false;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(928, 84);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thông tin lớp học";
+            this.label1.Text = "Thông tin học sinh";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -65,13 +65,11 @@
             this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ClassesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý thông tin lớp học";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClassesForm_FormClosing);
+            this.Text = "Quản lý thông tin học sinh";
             this.ResumeLayout(false);
 
         }
