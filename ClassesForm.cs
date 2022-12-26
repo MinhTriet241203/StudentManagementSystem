@@ -31,23 +31,51 @@ namespace StudentManagementSystem
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            DeleteButton.Text = "Huỷ";
+            classesDataGridView.Enabled = false;
             bindingNavigatorAddNewItem.PerformClick();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            //đưa ra lựa chọn confirm lưu cho người dùng
             var result = MessageBox.Show("Xác nhận lưu thay đổi?", "Thông báo", MessageBoxButtons.YesNo);
-            if (result != DialogResult.Yes) { return; }
-            classesBindingNavigatorSaveItem.PerformClick();
-            MessageBox.Show("Đã lưu thay đổi", "Thông báo");
+            if (result != DialogResult.Yes) return;
+            try
+            {
+                //gọi navigator save item và gọi lệnh nhấn vào, thay thế cho nhấn trực tiếp vào nút
+                classesBindingNavigatorSaveItem.PerformClick();
+                this.classesDataGridView.Enabled = true;
+                DeleteButton.Text = "Xoá";
+                MessageBox.Show("Lưu thay đổi thành công", "Thông báo");
+            }
+            catch (Exception)
+            {
+                //bắt lỗi khi người dùng để trống thông tin trước khi lưu
+                MessageBox.Show("Không thể lưu, hãy hoàn tất điền thông tin", "Thông báo");
+                return;
+            }
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Xác nhận xóa lớp học?", "Thông báo", MessageBoxButtons.YesNo);
-            if (result != DialogResult.Yes) { return; }
+            //đưa ra 2 trường hợp huỷ hoặc xoá, nếu người dùng nhấn tạo mới trước đó thì nút xoá đổi thành nút huỷ
+            //và thông báo cũng thay đổi tương tự
+
+            string confirmMessage = "Xác nhận xóa lớp học?";
+            string successMessage = "Xóa lớp học thành công";
+
+            if (DeleteButton.Text == "Huỷ")
+            {
+                confirmMessage = "Xác nhận huỷ tạo mới?";
+                successMessage = "Đã huỷ tạo mới";
+            }
+
+            var result = MessageBox.Show(confirmMessage, "Thông báo", MessageBoxButtons.YesNo);
+
+            if (result != DialogResult.Yes) return; //huỷ nếu không chọn yes
             bindingNavigatorDeleteItem.PerformClick();
-            MessageBox.Show("Xóa lớp học thành công", "Thông báo");
+            MessageBox.Show(successMessage, "Thông báo");
         }
 
         private void NextButton_Click(object sender, EventArgs e)
