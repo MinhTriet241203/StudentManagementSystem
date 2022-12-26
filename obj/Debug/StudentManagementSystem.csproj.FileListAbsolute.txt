@@ -38,3 +38,9 @@ C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSyst
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.SubjectsForm.resources
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.StudentsForm.resources
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.ClassesForm.resources
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManage.mdf
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManage_log.ldf
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.StatisticsForm.resources
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.ScoresForm.resources
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.SubjectsForm.resources
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.StudentsForm.resources

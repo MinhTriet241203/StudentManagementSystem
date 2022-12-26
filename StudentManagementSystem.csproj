@@ -73,6 +73,9 @@
     <Compile Include="ScoresForm.Designer.cs">
       <DependentUpon>ScoresForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentManageDataSet.cs">
+      <DependentUpon>StudentManageDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentManageDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
