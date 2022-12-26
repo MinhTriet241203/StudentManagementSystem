@@ -28,9 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassesForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label classIDLabel;
+            System.Windows.Forms.Label numberOfStudentsLabel;
+            System.Windows.Forms.Label academicYearLabel;
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.HomeButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.PreviousButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.studentManageDataSet = new StudentManagementSystem.StudentManageDataSet();
+            this.classesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.classesTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.ClassesTableAdapter();
+            this.tableAdapterManager = new StudentManagementSystem.StudentManageDataSetTableAdapters.TableAdapterManager();
+            this.classesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.classesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.classesDataGridView = new System.Windows.Forms.DataGridView();
+            this.classIDTextBox = new System.Windows.Forms.TextBox();
+            this.numberOfStudentsTextBox = new System.Windows.Forms.TextBox();
+            this.academicYearTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            classIDLabel = new System.Windows.Forms.Label();
+            numberOfStudentsLabel = new System.Windows.Forms.Label();
+            academicYearLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingNavigator)).BeginInit();
+            this.classesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -39,7 +83,7 @@
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Location = new System.Drawing.Point(18, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(928, 84);
@@ -57,12 +101,411 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "\r\n";
             // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.Teal;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.HomeButton.Image = global::StudentManagementSystem.Properties.Resources.house_48;
+            this.HomeButton.Location = new System.Drawing.Point(23, 21);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(45, 49);
+            this.HomeButton.TabIndex = 27;
+            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SaveButton.Image = global::StudentManagementSystem.Properties.Resources.save_32;
+            this.SaveButton.Location = new System.Drawing.Point(106, 416);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(194, 50);
+            this.SaveButton.TabIndex = 22;
+            this.SaveButton.Text = "Lưu";
+            this.SaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SaveButton.UseMnemonic = false;
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.BackColor = System.Drawing.Color.IndianRed;
+            this.DeleteButton.FlatAppearance.BorderSize = 0;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.DeleteButton.Image = global::StudentManagementSystem.Properties.Resources.delete_32;
+            this.DeleteButton.Location = new System.Drawing.Point(106, 480);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(194, 50);
+            this.DeleteButton.TabIndex = 23;
+            this.DeleteButton.Text = "Xoá";
+            this.DeleteButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DeleteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DeleteButton.UseMnemonic = false;
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // NextButton
+            // 
+            this.NextButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.NextButton.FlatAppearance.BorderSize = 0;
+            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.NextButton.Image = global::StudentManagementSystem.Properties.Resources.arrow_24_32;
+            this.NextButton.Location = new System.Drawing.Point(309, 131);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(30, 32);
+            this.NextButton.TabIndex = 24;
+            this.NextButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NextButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.NextButton.UseMnemonic = false;
+            this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // PreviousButton
+            // 
+            this.PreviousButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.PreviousButton.FlatAppearance.BorderSize = 0;
+            this.PreviousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.PreviousButton.Image = global::StudentManagementSystem.Properties.Resources.arrow_88_32;
+            this.PreviousButton.Location = new System.Drawing.Point(53, 131);
+            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PreviousButton.Name = "PreviousButton";
+            this.PreviousButton.Size = new System.Drawing.Size(30, 32);
+            this.PreviousButton.TabIndex = 25;
+            this.PreviousButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.PreviousButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.PreviousButton.UseMnemonic = false;
+            this.PreviousButton.UseVisualStyleBackColor = false;
+            this.PreviousButton.Click += new System.EventHandler(this.PreviousButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.AddButton.FlatAppearance.BorderSize = 0;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AddButton.Image = global::StudentManagementSystem.Properties.Resources.plus_4_32;
+            this.AddButton.Location = new System.Drawing.Point(106, 355);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(194, 50);
+            this.AddButton.TabIndex = 26;
+            this.AddButton.Text = "Tạo mới";
+            this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddButton.UseMnemonic = false;
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // studentManageDataSet
+            // 
+            this.studentManageDataSet.DataSetName = "StudentManageDataSet";
+            this.studentManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // classesBindingSource
+            // 
+            this.classesBindingSource.DataMember = "Classes";
+            this.classesBindingSource.DataSource = this.studentManageDataSet;
+            // 
+            // classesTableAdapter
+            // 
+            this.classesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClassesTableAdapter = this.classesTableAdapter;
+            this.tableAdapterManager.ScoresTableAdapter = null;
+            this.tableAdapterManager.StudentsTableAdapter = null;
+            this.tableAdapterManager.SubjectsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = StudentManagementSystem.StudentManageDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // classesBindingNavigator
+            // 
+            this.classesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.classesBindingNavigator.BindingSource = this.classesBindingSource;
+            this.classesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.classesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.classesBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.classesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.classesBindingNavigatorSaveItem});
+            this.classesBindingNavigator.Location = new System.Drawing.Point(637, 77);
+            this.classesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.classesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.classesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.classesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.classesBindingNavigator.Name = "classesBindingNavigator";
+            this.classesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.classesBindingNavigator.Size = new System.Drawing.Size(278, 25);
+            this.classesBindingNavigator.TabIndex = 28;
+            this.classesBindingNavigator.Text = "bindingNavigator1";
+            this.classesBindingNavigator.Visible = false;
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // classesBindingNavigatorSaveItem
+            // 
+            this.classesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.classesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("classesBindingNavigatorSaveItem.Image")));
+            this.classesBindingNavigatorSaveItem.Name = "classesBindingNavigatorSaveItem";
+            this.classesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.classesBindingNavigatorSaveItem.Text = "Save Data";
+            this.classesBindingNavigatorSaveItem.Click += new System.EventHandler(this.classesBindingNavigatorSaveItem_Click);
+            // 
+            // classesDataGridView
+            // 
+            this.classesDataGridView.AllowUserToAddRows = false;
+            this.classesDataGridView.AllowUserToDeleteRows = false;
+            this.classesDataGridView.AutoGenerateColumns = false;
+            this.classesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.classesDataGridView.BackgroundColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.classesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.classesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.classesDataGridView.DataSource = this.classesBindingSource;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.classesDataGridView.DefaultCellStyle = dataGridViewCellStyle14;
+            this.classesDataGridView.Location = new System.Drawing.Point(416, 131);
+            this.classesDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.classesDataGridView.MultiSelect = false;
+            this.classesDataGridView.Name = "classesDataGridView";
+            this.classesDataGridView.ReadOnly = true;
+            this.classesDataGridView.RowHeadersVisible = false;
+            this.classesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.classesDataGridView.Size = new System.Drawing.Size(524, 399);
+            this.classesDataGridView.TabIndex = 28;
+            // 
+            // classIDLabel
+            // 
+            classIDLabel.AutoSize = true;
+            classIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            classIDLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            classIDLabel.Location = new System.Drawing.Point(93, 137);
+            classIDLabel.Name = "classIDLabel";
+            classIDLabel.Size = new System.Drawing.Size(30, 20);
+            classIDLabel.TabIndex = 28;
+            classIDLabel.Text = "ID:";
+            // 
+            // classIDTextBox
+            // 
+            this.classIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "ClassID", true));
+            this.classIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classIDTextBox.Location = new System.Drawing.Point(129, 134);
+            this.classIDTextBox.Name = "classIDTextBox";
+            this.classIDTextBox.Size = new System.Drawing.Size(172, 26);
+            this.classIDTextBox.TabIndex = 29;
+            // 
+            // numberOfStudentsLabel
+            // 
+            numberOfStudentsLabel.AutoSize = true;
+            numberOfStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numberOfStudentsLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            numberOfStudentsLabel.Location = new System.Drawing.Point(39, 204);
+            numberOfStudentsLabel.Name = "numberOfStudentsLabel";
+            numberOfStudentsLabel.Size = new System.Drawing.Size(96, 20);
+            numberOfStudentsLabel.TabIndex = 30;
+            numberOfStudentsLabel.Text = "Số học sinh:";
+            // 
+            // numberOfStudentsTextBox
+            // 
+            this.numberOfStudentsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "NumberOfStudents", true));
+            this.numberOfStudentsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfStudentsTextBox.Location = new System.Drawing.Point(141, 201);
+            this.numberOfStudentsTextBox.Name = "numberOfStudentsTextBox";
+            this.numberOfStudentsTextBox.Size = new System.Drawing.Size(238, 26);
+            this.numberOfStudentsTextBox.TabIndex = 31;
+            // 
+            // academicYearLabel
+            // 
+            academicYearLabel.AutoSize = true;
+            academicYearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            academicYearLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            academicYearLabel.Location = new System.Drawing.Point(39, 267);
+            academicYearLabel.Name = "academicYearLabel";
+            academicYearLabel.Size = new System.Drawing.Size(76, 20);
+            academicYearLabel.TabIndex = 32;
+            academicYearLabel.Text = "Năm học:";
+            // 
+            // academicYearTextBox
+            // 
+            this.academicYearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "AcademicYear", true));
+            this.academicYearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.academicYearTextBox.Location = new System.Drawing.Point(141, 264);
+            this.academicYearTextBox.Name = "academicYearTextBox";
+            this.academicYearTextBox.Size = new System.Drawing.Size(238, 26);
+            this.academicYearTextBox.TabIndex = 33;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClassID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã lớp";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NumberOfStudents";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Số học sinh";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "AcademicYear";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Năm học";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
             // ClassesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(946, 547);
+            this.ClientSize = new System.Drawing.Size(965, 550);
+            this.Controls.Add(classIDLabel);
+            this.Controls.Add(this.classIDTextBox);
+            this.Controls.Add(numberOfStudentsLabel);
+            this.Controls.Add(this.numberOfStudentsTextBox);
+            this.Controls.Add(academicYearLabel);
+            this.Controls.Add(this.academicYearTextBox);
+            this.Controls.Add(this.classesDataGridView);
+            this.Controls.Add(this.classesBindingNavigator);
+            this.Controls.Add(this.HomeButton);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.PreviousButton);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -71,7 +514,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin lớp học";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClassesForm_FormClosing);
+            this.Load += new System.EventHandler(this.ClassesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingNavigator)).EndInit();
+            this.classesBindingNavigator.ResumeLayout(false);
+            this.classesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -79,6 +530,36 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button HomeButton;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button PreviousButton;
+        private System.Windows.Forms.Button AddButton;
+        private StudentManageDataSet studentManageDataSet;
+        private System.Windows.Forms.BindingSource classesBindingSource;
+        private StudentManageDataSetTableAdapters.ClassesTableAdapter classesTableAdapter;
+        private StudentManageDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator classesBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton classesBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView classesDataGridView;
+        private System.Windows.Forms.TextBox classIDTextBox;
+        private System.Windows.Forms.TextBox numberOfStudentsTextBox;
+        private System.Windows.Forms.TextBox academicYearTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
 

@@ -44,9 +44,10 @@
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1237, 103);
+            this.label1.Size = new System.Drawing.Size(928, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "Trang chủ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,9 +55,10 @@
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(12, 123);
+            this.label2.Location = new System.Drawing.Point(9, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1237, 2);
+            this.label2.Size = new System.Drawing.Size(928, 2);
             this.label2.TabIndex = 1;
             this.label2.Text = "\r\n";
             // 
@@ -71,11 +73,11 @@
             this.ThongKe.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThongKe.ForeColor = System.Drawing.Color.Transparent;
             this.ThongKe.Image = global::StudentManagementSystem.Properties.Resources.pie_chart_128;
-            this.ThongKe.Location = new System.Drawing.Point(1031, 209);
-            this.ThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ThongKe.Location = new System.Drawing.Point(773, 170);
+            this.ThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ThongKe.Name = "ThongKe";
-            this.ThongKe.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.ThongKe.Size = new System.Drawing.Size(219, 337);
+            this.ThongKe.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.ThongKe.Size = new System.Drawing.Size(164, 274);
             this.ThongKe.TabIndex = 2;
             this.ThongKe.Text = "Thống kê";
             this.ThongKe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -93,11 +95,11 @@
             this.DiemSo.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiemSo.ForeColor = System.Drawing.Color.Transparent;
             this.DiemSo.Image = global::StudentManagementSystem.Properties.Resources.feather_128;
-            this.DiemSo.Location = new System.Drawing.Point(773, 209);
-            this.DiemSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DiemSo.Location = new System.Drawing.Point(580, 170);
+            this.DiemSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DiemSo.Name = "DiemSo";
-            this.DiemSo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.DiemSo.Size = new System.Drawing.Size(219, 337);
+            this.DiemSo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.DiemSo.Size = new System.Drawing.Size(164, 274);
             this.DiemSo.TabIndex = 2;
             this.DiemSo.Text = "Điểm số";
             this.DiemSo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -115,11 +117,11 @@
             this.MonHoc.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonHoc.ForeColor = System.Drawing.Color.Transparent;
             this.MonHoc.Image = global::StudentManagementSystem.Properties.Resources.book_stack_128;
-            this.MonHoc.Location = new System.Drawing.Point(521, 209);
-            this.MonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MonHoc.Location = new System.Drawing.Point(391, 170);
+            this.MonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MonHoc.Name = "MonHoc";
-            this.MonHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.MonHoc.Size = new System.Drawing.Size(219, 337);
+            this.MonHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.MonHoc.Size = new System.Drawing.Size(164, 274);
             this.MonHoc.TabIndex = 2;
             this.MonHoc.Text = "Môn học";
             this.MonHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -137,11 +139,11 @@
             this.LopHoc.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LopHoc.ForeColor = System.Drawing.Color.Transparent;
             this.LopHoc.Image = global::StudentManagementSystem.Properties.Resources.classroom_2_128;
-            this.LopHoc.Location = new System.Drawing.Point(269, 209);
-            this.LopHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LopHoc.Location = new System.Drawing.Point(202, 170);
+            this.LopHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LopHoc.Name = "LopHoc";
-            this.LopHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.LopHoc.Size = new System.Drawing.Size(219, 337);
+            this.LopHoc.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.LopHoc.Size = new System.Drawing.Size(164, 274);
             this.LopHoc.TabIndex = 2;
             this.LopHoc.Text = "Lớp học";
             this.LopHoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -159,11 +161,11 @@
             this.HocSinh.Font = new System.Drawing.Font("JetBrains Mono", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HocSinh.ForeColor = System.Drawing.Color.Transparent;
             this.HocSinh.Image = global::StudentManagementSystem.Properties.Resources.student_128;
-            this.HocSinh.Location = new System.Drawing.Point(12, 209);
-            this.HocSinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HocSinh.Location = new System.Drawing.Point(9, 170);
+            this.HocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HocSinh.Name = "HocSinh";
-            this.HocSinh.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.HocSinh.Size = new System.Drawing.Size(219, 337);
+            this.HocSinh.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.HocSinh.Size = new System.Drawing.Size(164, 274);
             this.HocSinh.TabIndex = 2;
             this.HocSinh.Text = "Học sinh";
             this.HocSinh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -172,10 +174,10 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1261, 673);
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.ThongKe);
             this.Controls.Add(this.DiemSo);
             this.Controls.Add(this.MonHoc);
@@ -185,7 +187,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

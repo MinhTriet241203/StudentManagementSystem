@@ -67,5 +67,12 @@ namespace StudentManagementSystem
         {
             bindingNavigatorMovePreviousItem.PerformClick();
         }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
     }
 }
