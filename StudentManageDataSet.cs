@@ -1,6 +1,8 @@
-﻿namespace StudentManagementSystem {
-    
-    
-    public partial class StudentManageDataSet {
+﻿namespace StudentManagementSystem
+{
+
+
+    public partial class StudentManageDataSet
+    {
     }
 }
