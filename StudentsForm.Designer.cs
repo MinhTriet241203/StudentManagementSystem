@@ -319,7 +319,7 @@
             this.studentsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.studentsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("studentsBindingNavigatorSaveItem.Image")));
             this.studentsBindingNavigatorSaveItem.Name = "studentsBindingNavigatorSaveItem";
-            this.studentsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.studentsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.studentsBindingNavigatorSaveItem.Text = "Save Data";
             this.studentsBindingNavigatorSaveItem.Click += new System.EventHandler(this.studentsBindingNavigatorSaveItem_Click);
             // 
