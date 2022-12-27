@@ -28,28 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticsForm));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studentManageDataSet = new StudentManagementSystem.StudentManageDataSet();
-            this.studentManageDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.classesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.classesTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.ClassesTableAdapter();
-            this.scoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.scoresTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.ScoresTableAdapter();
-            this.scoreIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonclasses = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(8, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(930, 2);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "\r\n";
             // 
             // label1
             // 
@@ -57,158 +55,125 @@
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(135, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1237, 103);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(696, 64);
+            this.label1.TabIndex = 22;
             this.label1.Text = "Thống kê";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // panel1
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(12, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1237, 2);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "\r\n";
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonclasses);
+            this.panel1.Location = new System.Drawing.Point(0, 82);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(187, 465);
+            this.panel1.TabIndex = 25;
             // 
-            // dataGridView1
+            // button2
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.scoreIDDataGridViewTextBoxColumn,
-            this.studentIDDataGridViewTextBoxColumn,
-            this.subjectIDDataGridViewTextBoxColumn,
-            this.scoreDataGridViewTextBoxColumn,
-            this.semesterDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.scoresBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(532, 128);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(717, 533);
-            this.dataGridView1.TabIndex = 2;
+            this.button2.BackColor = System.Drawing.Color.LightPink;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.Image = global::StudentManagementSystem.Properties.Resources.calendar_7_48;
+            this.button2.Location = new System.Drawing.Point(0, 202);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 101);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Theo năm";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // studentManageDataSet
+            // button1
             // 
-            this.studentManageDataSet.DataSetName = "StudentManageDataSet";
-            this.studentManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button1.BackColor = System.Drawing.Color.LightPink;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Image = global::StudentManagementSystem.Properties.Resources.bar_chart_7_48;
+            this.button1.Location = new System.Drawing.Point(0, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 101);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Theo kỳ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // studentManageDataSetBindingSource
+            // buttonclasses
             // 
-            this.studentManageDataSetBindingSource.DataSource = this.studentManageDataSet;
-            this.studentManageDataSetBindingSource.Position = 0;
+            this.buttonclasses.BackColor = System.Drawing.Color.LightPink;
+            this.buttonclasses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonclasses.FlatAppearance.BorderSize = 0;
+            this.buttonclasses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonclasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonclasses.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonclasses.Image = global::StudentManagementSystem.Properties.Resources.classroom_2_48;
+            this.buttonclasses.Location = new System.Drawing.Point(0, 0);
+            this.buttonclasses.Name = "buttonclasses";
+            this.buttonclasses.Size = new System.Drawing.Size(187, 101);
+            this.buttonclasses.TabIndex = 26;
+            this.buttonclasses.Text = "Theo lớp";
+            this.buttonclasses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonclasses.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonclasses.UseVisualStyleBackColor = false;
             // 
-            // classesBindingSource
+            // HomeButton
             // 
-            this.classesBindingSource.DataMember = "Classes";
-            this.classesBindingSource.DataSource = this.studentManageDataSetBindingSource;
-            // 
-            // classesTableAdapter
-            // 
-            this.classesTableAdapter.ClearBeforeFill = true;
-            // 
-            // scoresBindingSource
-            // 
-            this.scoresBindingSource.DataMember = "Scores";
-            this.scoresBindingSource.DataSource = this.studentManageDataSetBindingSource;
-            // 
-            // scoresTableAdapter
-            // 
-            this.scoresTableAdapter.ClearBeforeFill = true;
-            // 
-            // scoreIDDataGridViewTextBoxColumn
-            // 
-            this.scoreIDDataGridViewTextBoxColumn.DataPropertyName = "ScoreID";
-            this.scoreIDDataGridViewTextBoxColumn.HeaderText = "ScoreID";
-            this.scoreIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.scoreIDDataGridViewTextBoxColumn.Name = "scoreIDDataGridViewTextBoxColumn";
-            this.scoreIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.scoreIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studentIDDataGridViewTextBoxColumn
-            // 
-            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            this.studentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studentIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // subjectIDDataGridViewTextBoxColumn
-            // 
-            this.subjectIDDataGridViewTextBoxColumn.DataPropertyName = "SubjectID";
-            this.subjectIDDataGridViewTextBoxColumn.HeaderText = "SubjectID";
-            this.subjectIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.subjectIDDataGridViewTextBoxColumn.Name = "subjectIDDataGridViewTextBoxColumn";
-            this.subjectIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // scoreDataGridViewTextBoxColumn
-            // 
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "Score";
-            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
-            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.scoreDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
-            this.semesterDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
-            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterDataGridViewTextBoxColumn.Width = 125;
+            this.HomeButton.BackColor = System.Drawing.Color.Teal;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.HomeButton.Image = global::StudentManagementSystem.Properties.Resources.house_48;
+            this.HomeButton.Location = new System.Drawing.Point(21, 20);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(45, 49);
+            this.HomeButton.TabIndex = 24;
+            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // StatisticsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1261, 673);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(958, 546);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "StatisticsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StatisticsForm_FormClosing);
             this.Load += new System.EventHandler(this.StatisticsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource studentManageDataSetBindingSource;
-        private StudentManageDataSet studentManageDataSet;
-        private System.Windows.Forms.BindingSource classesBindingSource;
-        private StudentManageDataSetTableAdapters.ClassesTableAdapter classesTableAdapter;
-        private System.Windows.Forms.BindingSource scoresBindingSource;
-        private StudentManageDataSetTableAdapters.ScoresTableAdapter scoresTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scoreIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonclasses;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
