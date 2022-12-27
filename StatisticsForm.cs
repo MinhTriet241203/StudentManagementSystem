@@ -16,6 +16,12 @@ namespace StudentManagementSystem
         public StatisticsForm()
         {
             InitializeComponent();
+
+            var classes = studentManageDataSet.Classes;
+            foreach (var c in classes)
+            {
+                MessageBox.Show(c.ClassName.ToString(), "Thong Bao");
+            }
         }
 
         private void StatisticsForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -25,23 +31,12 @@ namespace StudentManagementSystem
 
         private void StatisticsForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'studentManageDataSet.Scores' table. You can move, or remove it, as needed.
+            this.scoresTableAdapter.Fill(this.studentManageDataSet.Scores);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Subjects' table. You can move, or remove it, as needed.
+            this.subjectsTableAdapter.Fill(this.studentManageDataSet.Subjects);
             // TODO: This line of code loads data into the 'studentManageDataSet.Classes' table. You can move, or remove it, as needed.
             this.classesTableAdapter.Fill(this.studentManageDataSet.Classes);
-            using (SqlConnection con = new SqlConnection(Properties.Settings.Default.StudentManageConnectionString))
-            {
-                con.Open();
-                try
-                {
-                    using(SqlCommand command = new SqlCommand("SELECT * FROM Classes JOIN Students ON Students.ClassID = Classes.ClassID", con))
-                    {
-                        command.ExecuteNonQuery();
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Có lỗi xảy ra khi kết nối database", "Thông báo");
-                }
-            }
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -56,7 +51,7 @@ namespace StudentManagementSystem
             this.Validate();
             this.classesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.studentManageDataSet);
-
+            
         }
     }
 }

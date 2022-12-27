@@ -8,6 +8,8 @@ namespace StudentManagementSystem
         public StudentsForm()
         {
             InitializeComponent();
+
+
         }
 
         private void StudentsForm_FormClosing(object sender, FormClosingEventArgs e)
