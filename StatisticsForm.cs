@@ -16,12 +16,6 @@ namespace StudentManagementSystem
         public StatisticsForm()
         {
             InitializeComponent();
-
-            var classes = studentManageDataSet.Classes;
-            foreach (var c in classes)
-            {
-                MessageBox.Show(c.ClassName.ToString(), "Thong Bao");
-            }
         }
 
         private void StatisticsForm_FormClosing(object sender, FormClosingEventArgs e)
