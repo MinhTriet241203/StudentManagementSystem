@@ -38,6 +38,8 @@ namespace StudentManagementSystem {
         
         private global::System.Data.DataRelation relationFK_Students_Classes;
         
+        private global::System.Data.DataRelation relationSubjects_Scores;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +277,7 @@ namespace StudentManagementSystem {
             this.relationFK_Scores_Students = this.Relations["FK_Scores_Students"];
             this.relationFK_Scores_Subjects = this.Relations["FK_Scores_Subjects"];
             this.relationFK_Students_Classes = this.Relations["FK_Students_Classes"];
+            this.relationSubjects_Scores = this.Relations["Subjects_Scores"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -305,6 +308,10 @@ namespace StudentManagementSystem {
                         this.tableClasses.ClassIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableStudents.ClassIDColumn}, false);
             this.Relations.Add(this.relationFK_Students_Classes);
+            this.relationSubjects_Scores = new global::System.Data.DataRelation("Subjects_Scores", new global::System.Data.DataColumn[] {
+                        this.tableSubjects.SemesterColumn}, new global::System.Data.DataColumn[] {
+                        this.tableScores.SemesterColumn}, false);
+            this.Relations.Add(this.relationSubjects_Scores);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -817,19 +824,22 @@ namespace StudentManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ScoresRow AddScoresRow(StudentsRow parentStudentsRowByFK_Scores_Students, SubjectsRow parentSubjectsRowByFK_Scores_Subjects, byte Score, string Semester) {
+            public ScoresRow AddScoresRow(StudentsRow parentStudentsRowByFK_Scores_Students, SubjectsRow parentSubjectsRowByFK_Scores_Subjects, byte Score, SubjectsRow parentSubjectsRowBySubjects_Scores) {
                 ScoresRow rowScoresRow = ((ScoresRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
                         Score,
-                        Semester};
+                        null};
                 if ((parentStudentsRowByFK_Scores_Students != null)) {
                     columnValuesArray[1] = parentStudentsRowByFK_Scores_Students[0];
                 }
                 if ((parentSubjectsRowByFK_Scores_Subjects != null)) {
                     columnValuesArray[2] = parentSubjectsRowByFK_Scores_Subjects[0];
+                }
+                if ((parentSubjectsRowBySubjects_Scores != null)) {
+                    columnValuesArray[4] = parentSubjectsRowBySubjects_Scores[2];
                 }
                 rowScoresRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowScoresRow);
@@ -1206,6 +1216,7 @@ namespace StudentManagementSystem {
                 base.Columns.Add(this.columnStudentGender);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStudentID}, true));
+                this.columnStudentID.AutoIncrementSeed = 1;
                 this.columnStudentID.AllowDBNull = false;
                 this.columnStudentID.Unique = true;
                 this.columnStudentID.MaxLength = 10;
@@ -1810,6 +1821,17 @@ namespace StudentManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SubjectsRow SubjectsRowBySubjects_Scores {
+                get {
+                    return ((SubjectsRow)(this.GetParentRow(this.Table.ParentRelations["Subjects_Scores"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Subjects_Scores"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsScoreNull() {
                 return this.IsNull(this.tableScores.ScoreColumn);
             }
@@ -2031,6 +2053,17 @@ namespace StudentManagementSystem {
                 }
                 else {
                     return ((ScoresRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Scores_Subjects"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ScoresRow[] GetScoresRowsBySubjects_Scores() {
+                if ((this.Table.ChildRelations["Subjects_Scores"] == null)) {
+                    return new ScoresRow[0];
+                }
+                else {
+                    return ((ScoresRow[])(base.GetChildRows(this.Table.ChildRelations["Subjects_Scores"])));
                 }
             }
         }
@@ -2706,11 +2739,35 @@ SELECT ScoreID, StudentID, SubjectID, Score, Semester FROM Scores WHERE (ScoreID
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ScoreID, StudentID, SubjectID, Score, Semester FROM dbo.Scores";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT  Scores.ScoreID, Scores.StudentID, Scores.SubjectID, Scores.Score, Scores." +
+                "Semester\r\nFROM      Scores INNER JOIN\r\n                 Subjects ON Scores.Subje" +
+                "ctID = Subjects.SubjectID";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT  Scores.ScoreID, Scores.StudentID, Scores.SubjectID, Scores.Score, Scores." +
+                "Semester\r\nFROM      Scores INNER JOIN\r\n                 Subjects ON Scores.Subje" +
+                "ctID = Subjects.SubjectID";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT  Scores.ScoreID, Scores.StudentID, Scores.SubjectID, Scores.Score, Subject" +
+                "s.Semester\r\nFROM      Scores INNER JOIN\r\n                 Subjects ON Scores.Sub" +
+                "jectID = Subjects.SubjectID";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT  Scores.ScoreID, Scores.StudentID, Scores.SubjectID, Scores.Score, Subject" +
+                "s.Semester\r\nFROM      Scores INNER JOIN\r\n                 Subjects ON Scores.Sub" +
+                "jectID = Subjects.SubjectID";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2735,6 +2792,58 @@ SELECT ScoreID, StudentID, SubjectID, Score, Semester FROM Scores WHERE (ScoreID
             StudentManageDataSet.ScoresDataTable dataTable = new StudentManageDataSet.ScoresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(StudentManageDataSet.ScoresDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(StudentManageDataSet.ScoresDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy2(StudentManageDataSet.ScoresDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy3(StudentManageDataSet.ScoresDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

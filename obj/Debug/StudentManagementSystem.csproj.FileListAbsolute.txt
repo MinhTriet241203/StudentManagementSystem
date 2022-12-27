@@ -9,18 +9,6 @@ C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSyst
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.exe
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.pdb
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe.config
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManagementSystem.pdb
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.Home.resources
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.Properties.Resources.resources
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.GenerateResource.Cache
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.exe
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.pdb
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.AssemblyReference.cache
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.ClassesForm.resources
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
 D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe.config
 D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe
 D:\nhung du an ca nhan\CsharpProject\StudentManagementSystem\bin\Debug\StudentManagementSystem.pdb
@@ -38,11 +26,21 @@ C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSyst
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.SubjectsForm.resources
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.StudentsForm.resources
 C:\Users\minht\Downloads\StudentManagementSystem\obj\Debug\StudentManagementSystem.ClassesForm.resources
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManage.mdf
-C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManage_log.ldf
+C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManage.mdf
+C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManage_log.ldf
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe.config
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManagementSystem.exe
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\bin\Debug\StudentManagementSystem.pdb
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.StatisticsForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.ScoresForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.SubjectsForm.resources
 C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.StudentsForm.resources
-C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManage.mdf
-C:\Users\minht\Downloads\StudentManagementSystem\bin\Debug\StudentManage_log.ldf
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.ClassesForm.resources
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.Home.resources
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.Properties.Resources.resources
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.exe
+C:\Users\Admin\Desktop\Projects\StudentManagementSystem\StudentManagementSystem\obj\Debug\StudentManagementSystem.pdb

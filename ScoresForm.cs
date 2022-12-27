@@ -16,22 +16,6 @@ namespace StudentManagementSystem
         public ScoresForm()
         {
             InitializeComponent();
-
-            /*using (SqlConnection con = new SqlConnection(Properties.Settings.Default.StudentManageConnectionString))
-            {
-                con.Open();
-                try
-                {
-                    using (SqlCommand command = new SqlCommand("", con))
-                    {
-                        command.ExecuteNonQuery();
-                    }
-                }
-                catch
-                {
-                    Console.WriteLine("Table not created.");
-                }
-            }*/
         }
 
         private void ScoresForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -50,6 +34,40 @@ namespace StudentManagementSystem
         {
             // TODO: This line of code loads data into the 'studentManageDataSet.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.studentManageDataSet.Students);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Subjects' table. You can move, or remove it, as needed.
+            this.subjectsTableAdapter.Fill(this.studentManageDataSet.Subjects);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Scores' table. You can move, or remove it, as needed.
+            this.scoresTableAdapter.Fill(this.studentManageDataSet.Scores);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Subjects' table. You can move, or remove it, as needed.
+            this.subjectsTableAdapter.Fill(this.studentManageDataSet.Subjects);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Scores' table. You can move, or remove it, as needed.
+            this.scoresTableAdapter.Fill(this.studentManageDataSet.Scores);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Students' table. You can move, or remove it, as needed.
+            this.studentsTableAdapter.Fill(this.studentManageDataSet.Students);
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorMoveNextItem.PerformClick();
+        }
+
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorMovePreviousItem.PerformClick();
+        }
+
+        private void scoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.scoresBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManageDataSet);
+
+        }
+
+        private void studentIDComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.studentIDComboBox.SelectedIndex != -1)
+            studentIDTextBox.Text = this.studentIDComboBox.SelectedItem.ToString();
         }
     }
 }

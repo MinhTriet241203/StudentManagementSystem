@@ -21,5 +21,14 @@ namespace StudentManagementSystem
         {
             Application.Exit();
         }
+
+        private void StatisticsForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'studentManageDataSet.Scores' table. You can move, or remove it, as needed.
+            this.scoresTableAdapter.Fill(this.studentManageDataSet.Scores);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Classes' table. You can move, or remove it, as needed.
+            this.classesTableAdapter.Fill(this.studentManageDataSet.Classes);
+
+        }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace StudentManagementSystem
@@ -115,12 +113,12 @@ namespace StudentManagementSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.classIDTextBox.Text = comboBox1.SelectedValue.ToString();
+            if(comboBox1.SelectedValue != null)
+            classIDTextBox.Text = comboBox1.SelectedValue.ToString();
         }
-
         private void classIDTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.comboBox1.SelectedValue = classIDTextBox.Text;
+            comboBox1.SelectedValue = classIDTextBox.Text;
         }
     }
 }
