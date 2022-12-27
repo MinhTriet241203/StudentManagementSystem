@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label classIDLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassesForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label academicYearLabel;
             System.Windows.Forms.Label classNameLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassesForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.HomeButton = new System.Windows.Forms.Button();
@@ -45,6 +45,8 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.classesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.classesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentManageDataSet = new StudentManagementSystem.StudentManageDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -59,13 +61,11 @@
             this.classIDTextBox = new System.Windows.Forms.TextBox();
             this.fKStudentsClassesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.classesDataGridView = new System.Windows.Forms.DataGridView();
+            this.classIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.academicYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.academicYearTextBox = new System.Windows.Forms.TextBox();
             this.classNameTextBox = new System.Windows.Forms.TextBox();
-            this.classesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentManageDataSet = new StudentManagementSystem.StudentManageDataSet();
-            this.classIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.academicYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classesTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.ClassesTableAdapter();
             this.tableAdapterManager = new StudentManagementSystem.StudentManageDataSetTableAdapters.TableAdapterManager();
             this.studentsTableAdapter = new StudentManagementSystem.StudentManageDataSetTableAdapters.StudentsTableAdapter();
@@ -74,23 +74,46 @@
             classNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingNavigator)).BeginInit();
             this.classesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKStudentsClassesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKStudentsClassesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // classIDLabel
             // 
             classIDLabel.AutoSize = true;
-            classIDLabel.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            classIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             classIDLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            classIDLabel.Location = new System.Drawing.Point(144, 149);
-            classIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            classIDLabel.Location = new System.Drawing.Point(108, 121);
             classIDLabel.Name = "classIDLabel";
-            classIDLabel.Size = new System.Drawing.Size(48, 26);
+            classIDLabel.Size = new System.Drawing.Size(30, 20);
             classIDLabel.TabIndex = 28;
             classIDLabel.Text = "ID:";
+            // 
+            // academicYearLabel
+            // 
+            academicYearLabel.AutoSize = true;
+            academicYearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            academicYearLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            academicYearLabel.Location = new System.Drawing.Point(17, 224);
+            academicYearLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            academicYearLabel.Name = "academicYearLabel";
+            academicYearLabel.Size = new System.Drawing.Size(76, 20);
+            academicYearLabel.TabIndex = 31;
+            academicYearLabel.Text = "Năm học:";
+            // 
+            // classNameLabel
+            // 
+            classNameLabel.AutoSize = true;
+            classNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            classNameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            classNameLabel.Location = new System.Drawing.Point(17, 176);
+            classNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            classNameLabel.Name = "classNameLabel";
+            classNameLabel.Size = new System.Drawing.Size(65, 20);
+            classNameLabel.TabIndex = 33;
+            classNameLabel.Text = "Tên lớp:";
             // 
             // label1
             // 
@@ -98,9 +121,10 @@
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(17, 9);
+            this.label1.Location = new System.Drawing.Point(13, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1237, 103);
+            this.label1.Size = new System.Drawing.Size(928, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin lớp học";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,9 +132,10 @@
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(12, 112);
+            this.label2.Location = new System.Drawing.Point(9, 91);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1237, 2);
+            this.label2.Size = new System.Drawing.Size(928, 2);
             this.label2.TabIndex = 1;
             this.label2.Text = "\r\n";
             // 
@@ -122,10 +147,10 @@
             this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.HomeButton.Image = global::StudentManagementSystem.Properties.Resources.house_48;
-            this.HomeButton.Location = new System.Drawing.Point(36, 26);
-            this.HomeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HomeButton.Location = new System.Drawing.Point(27, 21);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(60, 60);
+            this.HomeButton.Size = new System.Drawing.Size(45, 49);
             this.HomeButton.TabIndex = 27;
             this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.HomeButton.UseVisualStyleBackColor = false;
@@ -136,13 +161,13 @@
             this.SaveButton.BackColor = System.Drawing.Color.LightSeaGreen;
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.SaveButton.Image = global::StudentManagementSystem.Properties.Resources.save_32;
-            this.SaveButton.Location = new System.Drawing.Point(216, 470);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaveButton.Location = new System.Drawing.Point(162, 382);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(259, 62);
+            this.SaveButton.Size = new System.Drawing.Size(194, 50);
             this.SaveButton.TabIndex = 22;
             this.SaveButton.Text = "Lưu";
             this.SaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -156,13 +181,13 @@
             this.DeleteButton.BackColor = System.Drawing.Color.IndianRed;
             this.DeleteButton.FlatAppearance.BorderSize = 0;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.DeleteButton.Image = global::StudentManagementSystem.Properties.Resources.delete_32;
-            this.DeleteButton.Location = new System.Drawing.Point(216, 564);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteButton.Location = new System.Drawing.Point(162, 458);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(259, 62);
+            this.DeleteButton.Size = new System.Drawing.Size(194, 50);
             this.DeleteButton.TabIndex = 23;
             this.DeleteButton.Text = "Xoá";
             this.DeleteButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,10 +204,10 @@
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.NextButton.Image = global::StudentManagementSystem.Properties.Resources.arrow_24_32;
-            this.NextButton.Location = new System.Drawing.Point(356, 142);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NextButton.Location = new System.Drawing.Point(267, 115);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(40, 39);
+            this.NextButton.Size = new System.Drawing.Size(30, 32);
             this.NextButton.TabIndex = 24;
             this.NextButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NextButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,10 +223,10 @@
             this.PreviousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PreviousButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.PreviousButton.Image = global::StudentManagementSystem.Properties.Resources.arrow_88_32;
-            this.PreviousButton.Location = new System.Drawing.Point(97, 142);
-            this.PreviousButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PreviousButton.Location = new System.Drawing.Point(73, 115);
+            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PreviousButton.Name = "PreviousButton";
-            this.PreviousButton.Size = new System.Drawing.Size(40, 39);
+            this.PreviousButton.Size = new System.Drawing.Size(30, 32);
             this.PreviousButton.TabIndex = 25;
             this.PreviousButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.PreviousButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -214,13 +239,13 @@
             this.AddButton.BackColor = System.Drawing.Color.SeaGreen;
             this.AddButton.FlatAppearance.BorderSize = 0;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.AddButton.Image = global::StudentManagementSystem.Properties.Resources.plus_4_32;
-            this.AddButton.Location = new System.Drawing.Point(216, 374);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddButton.Location = new System.Drawing.Point(162, 304);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(259, 62);
+            this.AddButton.Size = new System.Drawing.Size(194, 50);
             this.AddButton.TabIndex = 26;
             this.AddButton.Text = "Tạo mới";
             this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,14 +275,14 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.classesBindingNavigatorSaveItem});
-            this.classesBindingNavigator.Location = new System.Drawing.Point(849, 95);
+            this.classesBindingNavigator.Location = new System.Drawing.Point(637, 77);
             this.classesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.classesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.classesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.classesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.classesBindingNavigator.Name = "classesBindingNavigator";
             this.classesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.classesBindingNavigator.Size = new System.Drawing.Size(348, 27);
+            this.classesBindingNavigator.Size = new System.Drawing.Size(285, 27);
             this.classesBindingNavigator.TabIndex = 28;
             this.classesBindingNavigator.Text = "bindingNavigator1";
             this.classesBindingNavigator.Visible = false;
@@ -268,13 +293,23 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // classesBindingSource
+            // 
+            this.classesBindingSource.DataMember = "Classes";
+            this.classesBindingSource.DataSource = this.studentManageDataSet;
+            // 
+            // studentManageDataSet
+            // 
+            this.studentManageDataSet.DataSetName = "StudentManageDataSet";
+            this.studentManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(47, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -284,7 +319,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -293,7 +328,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -302,7 +337,7 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
@@ -316,7 +351,7 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -331,7 +366,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -340,7 +375,7 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
@@ -353,7 +388,7 @@
             this.classesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.classesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("classesBindingNavigatorSaveItem.Image")));
             this.classesBindingNavigatorSaveItem.Name = "classesBindingNavigatorSaveItem";
-            this.classesBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.classesBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.classesBindingNavigatorSaveItem.Text = "Save Data";
             this.classesBindingNavigatorSaveItem.Click += new System.EventHandler(this.classesBindingNavigatorSaveItem_Click);
             // 
@@ -361,11 +396,10 @@
             // 
             this.classIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "ClassID", true));
             this.classIDTextBox.Enabled = false;
-            this.classIDTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classIDTextBox.Location = new System.Drawing.Point(216, 146);
-            this.classIDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.classIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classIDTextBox.Location = new System.Drawing.Point(162, 119);
             this.classIDTextBox.Name = "classIDTextBox";
-            this.classIDTextBox.Size = new System.Drawing.Size(112, 34);
+            this.classIDTextBox.Size = new System.Drawing.Size(85, 26);
             this.classIDTextBox.TabIndex = 29;
             // 
             // fKStudentsClassesBindingSource
@@ -380,96 +414,38 @@
             this.classesDataGridView.AutoGenerateColumns = false;
             this.classesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.classesDataGridView.BackgroundColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.classesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.classIDDataGridViewTextBoxColumn,
             this.ClassName,
             this.academicYearDataGridViewTextBoxColumn});
             this.classesDataGridView.DataSource = this.classesBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.classesDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
-            this.classesDataGridView.Location = new System.Drawing.Point(499, 135);
-            this.classesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.classesDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.classesDataGridView.Location = new System.Drawing.Point(374, 110);
+            this.classesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classesDataGridView.MultiSelect = false;
             this.classesDataGridView.Name = "classesDataGridView";
             this.classesDataGridView.ReadOnly = true;
             this.classesDataGridView.RowHeadersVisible = false;
             this.classesDataGridView.RowHeadersWidth = 51;
             this.classesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.classesDataGridView.Size = new System.Drawing.Size(750, 491);
+            this.classesDataGridView.Size = new System.Drawing.Size(562, 399);
             this.classesDataGridView.TabIndex = 28;
-            // 
-            // ClassName
-            // 
-            this.ClassName.DataPropertyName = "ClassName";
-            this.ClassName.HeaderText = "Tên lớp";
-            this.ClassName.MinimumWidth = 6;
-            this.ClassName.Name = "ClassName";
-            this.ClassName.ReadOnly = true;
-            // 
-            // academicYearLabel
-            // 
-            academicYearLabel.AutoSize = true;
-            academicYearLabel.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            academicYearLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            academicYearLabel.Location = new System.Drawing.Point(23, 276);
-            academicYearLabel.Name = "academicYearLabel";
-            academicYearLabel.Size = new System.Drawing.Size(108, 26);
-            academicYearLabel.TabIndex = 31;
-            academicYearLabel.Text = "Năm học:";
-            // 
-            // academicYearTextBox
-            // 
-            this.academicYearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "AcademicYear", true));
-            this.academicYearTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.academicYearTextBox.Location = new System.Drawing.Point(216, 273);
-            this.academicYearTextBox.Name = "academicYearTextBox";
-            this.academicYearTextBox.Size = new System.Drawing.Size(259, 34);
-            this.academicYearTextBox.TabIndex = 32;
-            // 
-            // classNameLabel
-            // 
-            classNameLabel.AutoSize = true;
-            classNameLabel.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            classNameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            classNameLabel.Location = new System.Drawing.Point(23, 216);
-            classNameLabel.Name = "classNameLabel";
-            classNameLabel.Size = new System.Drawing.Size(108, 26);
-            classNameLabel.TabIndex = 33;
-            classNameLabel.Text = "Tên lớp:";
-            // 
-            // classNameTextBox
-            // 
-            this.classNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "ClassName", true));
-            this.classNameTextBox.Font = new System.Drawing.Font("JetBrains Mono NL", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classNameTextBox.Location = new System.Drawing.Point(216, 213);
-            this.classNameTextBox.Name = "classNameTextBox";
-            this.classNameTextBox.Size = new System.Drawing.Size(259, 34);
-            this.classNameTextBox.TabIndex = 34;
-            // 
-            // classesBindingSource
-            // 
-            this.classesBindingSource.DataMember = "Classes";
-            this.classesBindingSource.DataSource = this.studentManageDataSet;
-            // 
-            // studentManageDataSet
-            // 
-            this.studentManageDataSet.DataSetName = "StudentManageDataSet";
-            this.studentManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // classIDDataGridViewTextBoxColumn
             // 
@@ -480,6 +456,14 @@
             this.classIDDataGridViewTextBoxColumn.Name = "classIDDataGridViewTextBoxColumn";
             this.classIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // ClassName
+            // 
+            this.ClassName.DataPropertyName = "ClassName";
+            this.ClassName.HeaderText = "Tên lớp";
+            this.ClassName.MinimumWidth = 6;
+            this.ClassName.Name = "ClassName";
+            this.ClassName.ReadOnly = true;
+            // 
             // academicYearDataGridViewTextBoxColumn
             // 
             this.academicYearDataGridViewTextBoxColumn.DataPropertyName = "AcademicYear";
@@ -488,6 +472,26 @@
             this.academicYearDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.academicYearDataGridViewTextBoxColumn.Name = "academicYearDataGridViewTextBoxColumn";
             this.academicYearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // academicYearTextBox
+            // 
+            this.academicYearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "AcademicYear", true));
+            this.academicYearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.academicYearTextBox.Location = new System.Drawing.Point(162, 222);
+            this.academicYearTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.academicYearTextBox.Name = "academicYearTextBox";
+            this.academicYearTextBox.Size = new System.Drawing.Size(195, 26);
+            this.academicYearTextBox.TabIndex = 32;
+            // 
+            // classNameTextBox
+            // 
+            this.classNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classesBindingSource, "ClassName", true));
+            this.classNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classNameTextBox.Location = new System.Drawing.Point(162, 173);
+            this.classNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classNameTextBox.Name = "classNameTextBox";
+            this.classNameTextBox.Size = new System.Drawing.Size(195, 26);
+            this.classNameTextBox.TabIndex = 34;
             // 
             // classesTableAdapter
             // 
@@ -508,11 +512,11 @@
             // 
             // ClassesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1272, 646);
+            this.ClientSize = new System.Drawing.Size(954, 525);
             this.Controls.Add(academicYearLabel);
             this.Controls.Add(this.academicYearTextBox);
             this.Controls.Add(classNameLabel);
@@ -530,7 +534,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ClassesForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -541,10 +544,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingNavigator)).EndInit();
             this.classesBindingNavigator.ResumeLayout(false);
             this.classesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKStudentsClassesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentManageDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKStudentsClassesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
