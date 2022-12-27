@@ -192,7 +192,19 @@ SELECT StudentID, StudentName, ClassID, StudentDoB, StudentGender FROM Students 
               <Mapping SourceColumn="StudentDoB" DataSetColumn="StudentDoB" />
               <Mapping SourceColumn="StudentGender" DataSetColumn="StudentGender" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="StudentManageConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT StudentID, StudentName, Students.ClassID, StudentDoB, StudentGender 
+FROM dbo.Students
+LEFT JOIN dbo.Classes
+ON dbo.Classes.ClassID = dbo.Students.ClassID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SubjectsTableAdapter" GeneratorDataComponentClassName="SubjectsTableAdapter" Name="Subjects" UserDataComponentName="SubjectsTableAdapter">
             <MainSource>
@@ -267,7 +279,7 @@ SELECT SubjectID, SubjectName, Semester FROM Subjects WHERE (SubjectID = @Subjec
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ClassName" msprop:Generator_UserColumnName="ClassName" msprop:Generator_ColumnPropNameInTable="ClassNameColumn" msprop:Generator_ColumnPropNameInRow="ClassName" msprop:Generator_ColumnVarNameInTable="columnClassName">
+              <xs:element name="ClassName" msprop:Generator_ColumnPropNameInTable="ClassNameColumn" msprop:Generator_ColumnPropNameInRow="ClassName" msprop:Generator_UserColumnName="ClassName" msprop:Generator_ColumnVarNameInTable="columnClassName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
@@ -371,9 +383,9 @@ SELECT SubjectID, SubjectName, Semester FROM Subjects WHERE (SubjectID = @Subjec
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Scores_Students" msdata:parent="Students" msdata:child="Scores" msdata:parentkey="StudentID" msdata:childkey="StudentID" msprop:Generator_UserParentTable="Students" msprop:Generator_UserChildTable="Scores" msprop:Generator_RelationVarName="relationFK_Scores_Students" msprop:Generator_ChildPropName="GetScoresRows" msprop:Generator_UserRelationName="FK_Scores_Students" msprop:Generator_ParentPropName="StudentsRow" />
-      <msdata:Relationship name="FK_Scores_Subjects" msdata:parent="Subjects" msdata:child="Scores" msdata:parentkey="SubjectID" msdata:childkey="SubjectID" msprop:Generator_UserParentTable="Subjects" msprop:Generator_UserChildTable="Scores" msprop:Generator_RelationVarName="relationFK_Scores_Subjects" msprop:Generator_ChildPropName="GetScoresRows" msprop:Generator_UserRelationName="FK_Scores_Subjects" msprop:Generator_ParentPropName="SubjectsRow" />
-      <msdata:Relationship name="FK_Students_Classes" msdata:parent="Classes" msdata:child="Students" msdata:parentkey="ClassID" msdata:childkey="ClassID" msprop:Generator_UserParentTable="Classes" msprop:Generator_UserChildTable="Students" msprop:Generator_RelationVarName="relationFK_Students_Classes" msprop:Generator_ChildPropName="GetStudentsRows" msprop:Generator_ParentPropName="ClassesRow" msprop:Generator_UserRelationName="FK_Students_Classes" />
+      <msdata:Relationship name="FK_Scores_Students" msdata:parent="Students" msdata:child="Scores" msdata:parentkey="StudentID" msdata:childkey="StudentID" msprop:Generator_UserParentTable="Students" msprop:Generator_UserChildTable="Scores" msprop:Generator_RelationVarName="relationFK_Scores_Students" msprop:Generator_ChildPropName="GetScoresRows" msprop:Generator_ParentPropName="StudentsRow" msprop:Generator_UserRelationName="FK_Scores_Students" />
+      <msdata:Relationship name="FK_Scores_Subjects" msdata:parent="Subjects" msdata:child="Scores" msdata:parentkey="SubjectID" msdata:childkey="SubjectID" msprop:Generator_UserParentTable="Subjects" msprop:Generator_UserChildTable="Scores" msprop:Generator_RelationVarName="relationFK_Scores_Subjects" msprop:Generator_ChildPropName="GetScoresRows" msprop:Generator_ParentPropName="SubjectsRow" msprop:Generator_UserRelationName="FK_Scores_Subjects" />
+      <msdata:Relationship name="FK_Students_Classes" msdata:parent="Classes" msdata:child="Students" msdata:parentkey="ClassID" msdata:childkey="ClassID" msprop:Generator_UserParentTable="Classes" msprop:Generator_UserChildTable="Students" msprop:Generator_RelationVarName="relationFK_Students_Classes" msprop:Generator_ChildPropName="GetStudentsRows" msprop:Generator_UserRelationName="FK_Students_Classes" msprop:Generator_ParentPropName="ClassesRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

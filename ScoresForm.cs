@@ -50,6 +50,18 @@ namespace StudentManagementSystem
         {
             // TODO: This line of code loads data into the 'studentManageDataSet.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.studentManageDataSet.Students);
+            // TODO: This line of code loads data into the 'studentManageDataSet.Classes' table. You can move, or remove it, as needed.
+            this.classesTableAdapter.Fill(this.studentManageDataSet.Classes);
+
+        }
+
+        private void comboBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxClasses.Enabled = true;
+            comboBoxClasses.SelectedValue = comboBoxStudents.SelectedValue;
+
+            comboBoxYear.Enabled = true;
+            comboBoxYear.SelectedValue = comboBoxClasses.SelectedValue;
         }
     }
 }
