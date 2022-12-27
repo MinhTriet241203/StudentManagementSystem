@@ -25,7 +25,9 @@ namespace StudentManagementSystem
 
         private void StatisticsForm_Load(object sender, EventArgs e)
         {
-            using(SqlConnection con = new SqlConnection(Properties.Settings.Default.StudentManageConnectionString))
+            // TODO: This line of code loads data into the 'studentManageDataSet.Classes' table. You can move, or remove it, as needed.
+            this.classesTableAdapter.Fill(this.studentManageDataSet.Classes);
+            using (SqlConnection con = new SqlConnection(Properties.Settings.Default.StudentManageConnectionString))
             {
                 con.Open();
                 try
@@ -47,6 +49,14 @@ namespace StudentManagementSystem
             this.Hide();
             Home home = new Home();
             home.Show();
+        }
+
+        private void classesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.classesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManageDataSet);
+
         }
     }
 }
