@@ -6,7 +6,7 @@ Phần thống kê tụi tui query lấy thông tin và sử dụng để tính 
 
 Query để ra được kết quả ở trên:
 
-```
+```SQL
 SELECT  Students.StudentName, AVG(Scores.Score) AS Average, 
 CASE WHEN AVG(Scores.Score) > 5 THEN 'good' 
 WHEN AVG(Scores.Score) = 5 THEN 'average' 
