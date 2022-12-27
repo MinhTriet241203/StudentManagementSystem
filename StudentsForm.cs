@@ -120,7 +120,7 @@ namespace StudentManagementSystem
 
         private void classIDTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.comboBox1.Text = classIDTextBox.Text;
+            this.comboBox1.SelectedValue = classIDTextBox.Text;
         }
     }
 }
